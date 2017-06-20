@@ -32,11 +32,11 @@ if (production) {
 module.exports = {
   entry: `${__dirname}/app/entry.js`,
   devtool: production ? false : 'eval',
+  plugins,
   output: {
-    path: 'build',
+    path: __dirname + '/build',
     filename: 'bundle.js'
   },
-  plugins,
   sassLoader: { includePaths: [
     `${__dirname}/node_modules/bootstrap/scss/`,
     `${__dirname}/app/scss`
