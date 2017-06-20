@@ -1,26 +1,30 @@
 @import './../scss/lib/theme/vars';
 .about{
- width: $section-width;
- height: 90%;
- max-width: 450px;
- top: $gutter;
- position: absolute;
- background-color: $white;
- z-index: 1;
+ // height: 100%;
+ width: 100%;
  h2{
   text-align: center;
   padding-bottom: 1em;
   font-size: 2em;
-  font-weight: bold;
-  margin-top: 25vh;
+  margin-top: $gutter;
+  // font-family: 'Vibur', cursive;
+font-family: 'Dawning of a New Day', cursive;
 }
-
+img{
+  height: 40%;
+  width: 30%;
+  max-width: 150px;
+  max-height: 150px;
+  border-radius: $gutter * 50;
+  margin-left: 35%;
+}
  p, .connect-me{
   width: 70%;
+  max-width: 450px;
   margin-left: $gutter * 3;
   text-align: justify;
   margin-top: $gutter;
-  color: gray;
+  color: $color;
 }
 .connect-me li{
   display: block;
@@ -33,32 +37,14 @@
   color: $black;
   text-align: center;
 }
-
-.visibility{
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  background-color: $white;
-  animation: stateChanger 2000ms ease-out forwards;
-  // animation-delay: .5s;
 }
+@media screen and (min-width: 450px){
+  .about img{
+  margin-left: calc(50% - 75px);
+  }
 }
-
-@keyframes stateChanger {
-  from{
-    //   opacity: 1;
-        width: 100%;
-    }
-    to{
-    //
-        width: 0%;
-
-    }
-}
-
-@media screen and (min-width: 450px) {
-  .about{
-    width: 50%;
-    left: $gutter;
+@media screen and (min-width: 625px){
+  .about p{
+    margin-left: calc(50% - 225px);
   }
 }

@@ -1,6 +1,13 @@
 @import './../scss/lib/theme/vars';
 .home{
   height: $section-height;
-  width: $section-width;
-  background-color: orange;
+  width: 100%;
+.keep{
+  height: 20%;
+}
+  .content_display{
+    height: 75%;
+    width: 100%;
+    border: 2px solid $color;
+  }
 }
