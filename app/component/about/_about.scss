@@ -1,0 +1,64 @@
+@import './../scss/lib/theme/vars';
+.about{
+ width: $section-width;
+ height: 90%;
+ max-width: 450px;
+ top: $gutter;
+ position: absolute;
+ background-color: $white;
+ z-index: 1;
+ h2{
+  text-align: center;
+  padding-bottom: 1em;
+  font-size: 2em;
+  font-weight: bold;
+  margin-top: 25vh;
+}
+
+ p, .connect-me{
+  width: 70%;
+  margin-left: $gutter * 3;
+  text-align: justify;
+  margin-top: $gutter;
+  color: gray;
+}
+.connect-me li{
+  display: block;
+  height: 1.5em;
+}
+.connect-me a{
+  display: inline-block;
+  font-weight: bold;
+  padding-right: 0.5em;
+  color: $black;
+  text-align: center;
+}
+
+.visibility{
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background-color: $white;
+  animation: stateChanger 2000ms ease-out forwards;
+  // animation-delay: .5s;
+}
+}
+
+@keyframes stateChanger {
+  from{
+    //   opacity: 1;
+        width: 100%;
+    }
+    to{
+    //
+        width: 0%;
+
+    }
+}
+
+@media screen and (min-width: 450px) {
+  .about{
+    width: 50%;
+    left: $gutter;
+  }
+}

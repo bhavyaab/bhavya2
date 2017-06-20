@@ -1,0 +1,31 @@
+*{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+body{
+  /*font-family: "Helvetica Neue", 'Nunito',Helvetica, Arial, sans-serif;*/
+  font-family: 'Nunito', sans-serif;
+  font-weight: 800;
+  font-size: 1.25em;
+  color: #000;
+  font-weight: 100;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+.underline:hover {
+  text-decoration: none;
+  border-bottom: 5px solid $art_color;
+  color: inherit;
+}
+/*=========== footer ==================*/
+footer{
+width: 100%;
+text-align: center;
+}

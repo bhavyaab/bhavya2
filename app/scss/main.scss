@@ -1,0 +1,24 @@
+// :::::: VENDOR ::::: //
+@import "bootstrap";
+// :::::: VARS ::::: //
+@import 'lib/theme/vars';
+// :::: BASE :::: //
+@import "lib/base/reset";
+@import "lib/base/base";
+
+
+
+
+// :::: LAYOUT :::: //
+// @import "lib/layout/footer";
+
+
+
+// :::: VIEWS :::: //
+@import'../view/home/home.scss';
+
+
+// :::: COMPONENT :::: //
+@import '../component/about/about.scss';
+@import '../component/my-header/my-header.scss';
+@import '../component/art/art.scss';
