@@ -1,8 +1,20 @@
 <section class="tabs">
     <ul>
-    <li ng-click="tabsCtrl.changeAbout()">About</li>
-    <li ng-click="tabsCtrl.changeSkills()">Skills</li>
-    <li ng-click="tabsCtrl.changeAbout()">Work</li>
+    <li
+    ng-click=
+    "tabsCtrl.display.about=true;
+     tabsCtrl.display.skills=false;
+     tabsCtrl.display.work=false">About</li>
+    <li
+    ng-click=
+    "tabsCtrl.display.skills=true;
+    tabsCtrl.display.about=false;
+    tabsCtrl.display.work=false">Skills</li>
+    <li
+    ng-click=
+    "tabsCtrl.display.work=true;
+    tabsCtrl.display.skills=false;
+    tabsCtrl.display.about=false">Work</li>
     <li ng-click="tabsCtrl.changeAbout()">Contact</li>
   </ul>
 </section >

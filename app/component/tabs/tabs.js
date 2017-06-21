@@ -5,22 +5,27 @@ module.exports = {
   controller: ['$log', '$location', TabsController],
   controllerAs: 'tabsCtrl',
   bindings:{
-    showAbout: '=',
-    showSkills: '='
+    display: '='
   }
 };
 
 function TabsController($log, $location) {
   $log.debug('TabsController');
-
-  var element = document.querySelector('.about');
+  console.log('tabs - ',this.display);
+  var hideAll = function(){
+    for (var prop in this.display){
+      this.display[prop] = false;
+    }
+  };
 
   this.changeAbout = function(){
     console.log('call about');
-    this.showAbout = !this.showAbout;
+    hideAll();
+    this.display.about = true;
   };
   this.changeSkills = function(){
     console.log('call Skills');
-    this.showSkills = !this.showSkills;
+    hideAll();
+    this.display.skills = true;
   };
 }

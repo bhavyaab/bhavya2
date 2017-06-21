@@ -2,9 +2,10 @@
   <div class="keep">
 
   </div>
+  <tabs display="homeCtrl.display"></tabs>
   <div class="content_display">
-  <about ng-show="homeCtrl.showAbout"></about>
-  <skills ng-show="homeCtrl.showSkills"></skills>
+  <about ng-show="homeCtrl.display.about"></about>
+  <skills ng-show="homeCtrl.display.skills"></skills>
+  <work ng-show="homeCtrl.display.work"></work>
 </div>
-<tabs showAbout="homeCtrl.showAbout"></tabs>
 </section>

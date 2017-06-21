@@ -10,6 +10,12 @@ function homeController($log, $location){
   let url = $location.url();
   this.showHome = url === '' || '/home' || '/';
 
-  this.showAbout = true;
-  this.showSkills = false;
+  this.display = {
+    about:true,
+    skills:false,
+    work: false,
+    contact: false
+  };
+
+  console.log('home - ', this.display);
 }
