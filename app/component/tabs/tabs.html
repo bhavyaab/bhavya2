@@ -3,18 +3,25 @@
     <li
     ng-click=
     "tabsCtrl.display.about=true;
+    tabsCtrl.display.contact=false;
      tabsCtrl.display.skills=false;
      tabsCtrl.display.work=false">About</li>
     <li
     ng-click=
     "tabsCtrl.display.skills=true;
+    tabsCtrl.display.contact=false;
     tabsCtrl.display.about=false;
     tabsCtrl.display.work=false">Skills</li>
     <li
     ng-click=
     "tabsCtrl.display.work=true;
+    tabsCtrl.display.contact=false;
     tabsCtrl.display.skills=false;
     tabsCtrl.display.about=false">Work</li>
-    <li ng-click="tabsCtrl.changeAbout()">Contact</li>
+    <li ng-click=
+    "tabsCtrl.display.contact=true;
+    tabsCtrl.display.work=false;
+    tabsCtrl.display.skills=false;
+    tabsCtrl.display.about=false">Contact</li>
   </ul>
 </section >

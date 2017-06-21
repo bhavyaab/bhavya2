@@ -3,9 +3,11 @@
 
   </div>
   <tabs display="homeCtrl.display"></tabs>
+
   <div class="content_display">
-  <about ng-show="homeCtrl.display.about"></about>
-  <skills ng-show="homeCtrl.display.skills"></skills>
-  <work ng-show="homeCtrl.display.work"></work>
+  <about ng-if="homeCtrl.display.about"></about>
+  <skills ng-if="homeCtrl.display.skills"></skills>
+  <work ng-if="homeCtrl.display.work"></work>
+  <contact ng-if="homeCtrl.display.contact"></contact>
 </div>
 </section>
