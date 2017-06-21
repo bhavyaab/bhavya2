@@ -1,11 +1,19 @@
-.my-header{
+.tabs{
    li{
      width: 100%;
      text-align: center;
      padding: $gutter/5;
      cursor: pointer;
+     border-radius: $bdRdius;
    }
    li:hover{
      background-color: $color;
    }
+}
+@media screen and (min-width:450px){
+  .tabs ul{
+    display: flex;
+    padding-left: 0;
+    margin-bottom: 0;
+}
 }

@@ -52,11 +52,11 @@
     "sass-loader": "^4.1.1",
     "style-loader": "^0.13.2",
     "ui-router": "^1.0.0-alpha.3",
-    "url-loader": "^0.5.7",
     "webpack": "^1.12.9",
     "webpack-dev-server": "^1.16.2"
   },
   "devDependencies": {
+    "url-loader": "^0.5.7",
     "gulp": "^3.9.1",
     "gulp-util": "^3.0.8"
   }
