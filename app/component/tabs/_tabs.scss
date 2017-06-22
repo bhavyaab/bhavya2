@@ -4,13 +4,14 @@
      text-align: center;
      padding: $gutter/5;
      cursor: pointer;
-     border-radius: $bdRdius;
+     outline-radius: $bdRdius;
      margin-bottom: $gutter/2;
    }
    li:hover{
     // background-color: $color;
     // text-decoration: underline;
-    text-shadow: 5px 5px 10px black;
+    // text-shadow: 5px 5px 10px black;
+    outline: 1px solid $black;
    }
 }
 @media screen and (min-width:450px){

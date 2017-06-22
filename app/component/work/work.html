@@ -1,3 +1,18 @@
 <section class="work">
-  <li class="one">work</li>
+  <div class="slider-container">
+  <div class="slider-content">
+  <div class="slider-single" ng-repeat="x in workCtrl.projects">
+     <img class="slider-single-image" src="../../assets/bhavya2.jpg" alt="3" />
+     <a class="slider-single-download" href="javascript:void(0);">Download <i class="fa fa-download"></i></a>
+     <h1 class="slider-single-title">{{x.technical}}</h1>
+     <a class="slider-single-likes" href="javascript:void(0);">
+       <!-- <i class="fa fa-heart"></i> -->
+       <!-- <p>1,247</p> -->
+     </a>
+   </div>
+   <a class="slider-left" ng-click="workCtrl.slideLeft()" href="javascript:void(0);"><i class="fa fa-arrow-left"></i></a>
+
+  <a class="slider-right" ng-click="workCtrl.slideRight()" href="javascript:void(0);"><i class="fa fa-arrow-right"></i></a>
+  </div>
+</div>
 </section>

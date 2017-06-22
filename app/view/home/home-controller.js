@@ -12,10 +12,8 @@ function homeController($log, $location){
 
   this.display = {
     about:false,
-    skills:true,
-    work: false,
+    skills:false,
+    work: true,
     contact: false
   };
-
-  console.log('home - ', this.display);
 }
