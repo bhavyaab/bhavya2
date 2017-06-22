@@ -12,20 +12,30 @@ module.exports = {
 function TabsController($log, $location) {
   $log.debug('TabsController');
   console.log('tabs - ',this.display);
+
+  this.$onInit = function(){
+    console.log('tabs on init- ',this.display);
+    return this.display;
+  };
   var hideAll = function(){
-    for (var prop in this.display){
-      this.display[prop] = false;
-    }
+    this.$onInit = function(){
+      for (var prop in this.display){
+        this.display[prop] = false;
+      }
+    };
   };
 
   this.changeAbout = function(){
     console.log('call about');
     hideAll();
-    this.display.about = true;
+    this.$onInit = function(){
+      this.display.about = true;
+    };
   };
   this.changeSkills = function(){
     console.log('call Skills');
     hideAll();
     this.display.skills = true;
   };
+
 }

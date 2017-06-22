@@ -1,27 +1,35 @@
 <section class="tabs">
     <ul>
+    <li ng-click="tabsCtrl.changeAbout()">AboutCtrl</li>
     <li
     ng-click=
     "tabsCtrl.display.about=true;
+    tabsCtrl.display.skills=false;
     tabsCtrl.display.contact=false;
-     tabsCtrl.display.skills=false;
-     tabsCtrl.display.work=false">About</li>
+    tabsCtrl.display.work=false";
+    ng-style="tabsCtrl.display.about && {'background-color':'gray'}"
+    >About</li>
     <li
     ng-click=
     "tabsCtrl.display.skills=true;
     tabsCtrl.display.contact=false;
     tabsCtrl.display.about=false;
-    tabsCtrl.display.work=false">Skills</li>
+    tabsCtrl.display.work=false"
+    ng-style="tabsCtrl.display.skills && {'background-color':'gray'}"
+    >Skills</li>
     <li
     ng-click=
     "tabsCtrl.display.work=true;
     tabsCtrl.display.contact=false;
     tabsCtrl.display.skills=false;
-    tabsCtrl.display.about=false">Work</li>
+    tabsCtrl.display.about=false"
+    ng-style="tabsCtrl.display.work && {'background-color':'gray'}"
+    >Work</li>
     <li ng-click=
     "tabsCtrl.display.contact=true;
     tabsCtrl.display.work=false;
     tabsCtrl.display.skills=false;
-    tabsCtrl.display.about=false">Contact</li>
+    tabsCtrl.display.about=false"
+    ng-style="tabsCtrl.display.contact && {'background-color':'gray'}" >Contact</li>
   </ul>
 </section >

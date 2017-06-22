@@ -11,8 +11,8 @@ function homeController($log, $location){
   this.showHome = url === '' || '/home' || '/';
 
   this.display = {
-    about:true,
-    skills:false,
+    about:false,
+    skills:true,
     work: false,
     contact: false
   };

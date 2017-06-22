@@ -1,3 +1,17 @@
 <section class="skills">
-<li class="one">skills</li>
+<div class="right">
+ <ul>
+   <li ng-repeat="x in skillsCtrl.mySkills">
+     <span ng-mouseover="skillsCtrl.displayContent()" class="responsive">{{x.name}}</span>
+     <span class="rating">
+       <span ng-repeat="number in skillsCtrl.getStars(x.star) track by $index">&#9733;</span>
+       <span ng-repeat="number in skillsCtrl.getStars(5 - x.star) track by $index">&#9734;</span>
+     </span>
+   </li>
+ </ul>
+</div>
+  <div class="left">
+    <p id="detail"></p>
+  </div>
 </section>
+<!-- /*&#9733;&#9734;*/ -->

@@ -1,4 +1,40 @@
 .skills{
   height: 100%;
   width:100%;
+  position: relative;
+
+div{
+  width: 100%;
+  min-height: 60vh;
+}
+
+.left{
+  display: none;
+}
+
+.right ul{
+  width: 80%;
+  height: 80%;
+  margin-left: 10%;
+  margin-top: $gutter * 2;
+}
+.right li {
+  cursor: pointer;
+  margin-bottom: $gutter/4;
+}
+.rating{
+  float: right;
+}
+
+@media screen and (min-width: 650px){
+  div{
+    position: absolute;
+    width: 50%;
+  }
+  .left{
+    display: block;
+    left: 50%;
+  }
+}
+
 }
