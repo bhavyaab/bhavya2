@@ -8,7 +8,7 @@ module.exports = {
 
 function SkillsController($log, $location) {
   $log.debug('SkillsController');
-
+  this.default = true;
   this.getStars = function(stars) {
     return new Array(stars);
   };
@@ -17,37 +17,44 @@ function SkillsController($log, $location) {
     html : {
       name: 'HTML 5',
       star: 5,
-      detail:'htmlhtmlhtmlhtmlhtmlhtml'
+      detail:'Quality is what makes me stand out. My work meets professional website guidelines including markup standards, accessibility and compatibility.',
+      showDetail: false
     },
     css : {
       name: 'CSS 3',
       star: 3,
-      detail:'css css css css css css css '
+      detail:'I write CSS3 code following guidelines and standards for compatibility. I can use new CSS3 features especially "Animation" and "Transition", so I can develop simple animation without using flash. ',
+      showDetail: false
     },
     js: {
       name: 'JAVASCRIPT',
       star: 4,
       detail: 'JAVASCRIPT JAVASCRIPT JAVASCRIPT JAVASCRIPT',
+      showDetail: false
     },
     jq: {
       name: 'JQUERY',
       star: 4,
       detail: 'jquery jquery jquery jquery',
+      showDetail: false
     },
     node: {
       name: 'NODE JS',
       star: 4,
-      detatl: 'node node node node '
+      detail: 'node node node node ',
+      showDetail: false
     },
     angular: {
       name: 'ANGULAR JS',
       star: 4,
-      detatl: 'angular angular angular angular'
+      detail: 'angular angular angular angular',
+      showDetail: false
     },
     responsive: {
       name: 'RESPONSIVE',
       star: 5,
-      detatl:'responsive responsive responsive '
+      detail:'Good knowledge developing responsive web layout. Try to resize your browser to see what happen or try to view this website with your iPhone.',
+      showDetail: false
     }
   };
 

@@ -6,17 +6,25 @@
 div{
   width: 100%;
   min-height: 60vh;
+  // border: 2px solid black;
 }
 
 .left{
   display: none;
 }
+.left p{
+  width: 70%;
+  min-height: 45%;
+  margin-left: 15%;
+  margin-top: 35%;
+  text-align: center;
+}
 
 .right ul{
   width: 80%;
   height: 80%;
-  margin-left: 10%;
-  margin-top: $gutter * 2;
+  margin-left: $gutter * 2;
+  margin-top: $gutter * 4;
 }
 .right li {
   cursor: pointer;

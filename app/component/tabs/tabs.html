@@ -15,7 +15,7 @@
     tabsCtrl.display.contact=false;
     tabsCtrl.display.about=false;
     tabsCtrl.display.work=false"
-    ng-style="tabsCtrl.display.skills && {'background-color':'gray'}"
+    ng-style="tabsCtrl.display.skills && {'border-bottom':'2px solid gray'}"
     >Skills</li>
     <li
     ng-click=
@@ -23,13 +23,13 @@
     tabsCtrl.display.contact=false;
     tabsCtrl.display.skills=false;
     tabsCtrl.display.about=false"
-    ng-style="tabsCtrl.display.work && {'background-color':'gray'}"
+    ng-style="tabsCtrl.display.work && {'border':'2px solid gray'}"
     >Work</li>
     <li ng-click=
     "tabsCtrl.display.contact=true;
     tabsCtrl.display.work=false;
     tabsCtrl.display.skills=false;
     tabsCtrl.display.about=false"
-    ng-style="tabsCtrl.display.contact && {'background-color':'gray'}" >Contact</li>
+    ng-style="tabsCtrl.display.contact && {'text-shadow':'5px 5px 10px black'}" >Contact</li>
   </ul>
 </section >
