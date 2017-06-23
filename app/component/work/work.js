@@ -38,10 +38,10 @@ function WorkController($log, $location) {
   ];
 
   var color = ['red', 'blue', 'green', 'yellow', 'pink', 'purple', 'green'];
-  var width =  document.getElementsByClassName('item');
-  console.log('width == ', width, ' width -- ', width.clientWidth);
+  // var width = document.getElementsByClassName('item')[0].offsetWidth;
+  // console.log('width == ', width, ' width -- ', width.clientWidth);
   this.angle = 360/(this.projects.length);
-  this.zindex = width / 2 || '250px';
+  this.zindex = '250px';
 
   this.transform = function(i){
     return {'transform': 'rotateY(' + i * this.angle + 'deg) translateZ(' + this.zindex + ')',
