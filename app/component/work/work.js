@@ -9,6 +9,7 @@ module.exports = {
 function WorkController($log, $location) {
   $log.debug('WorkController');
 
+
   this.projects = [
     {
       name: 'Inbox Health',
@@ -35,83 +36,26 @@ function WorkController($log, $location) {
       image: 'app/assets/bhavya2.jpg'
     }
   ];
-  //
-  var slide = document.getElementsByClassName('.slider-single');
-  var slideTotal = this.projects.length - 1;
-  var slideCurrent = -1;
 
-  this.slideInitial = function() {
-    slide.addClass('proactivede');
-    setTimeout(function() {
-      this.slideRight();
-    }, 500);
+  var color = ['red', 'blue', 'green', 'yellow', 'pink', 'purple', 'green'];
+  var width =  document.getElementsByClassName('item');
+  console.log('width == ', width, ' width -- ', width.clientWidth);
+  this.angle = 360/(this.projects.length);
+  this.zindex = width / 2 || '250px';
+
+  this.transform = function(i){
+    return {'transform': 'rotateY(' + i * this.angle + 'deg) translateZ(' + this.zindex + ')',
+      'background-color' : color[i]};
   };
-
-  this.slideRight = function () {
-    if (slideCurrent < slideTotal) {
-      slideCurrent++;
-    } else {
-      slideCurrent = 0;
+  var currAngle = 0;
+  this.rotate = function(event){
+    var elementClass = event.target.className;
+    if(elementClass === 'next'){
+      currAngle = currAngle - this.angle;
+    } else if(elementClass === 'prev'){
+      currAngle = currAngle + this.angle;
     }
 
-    if (slideCurrent > 0) {
-      var preactiveSlide = slide.eq(slideCurrent - 1);
-    } else {
-      var preactiveSlide = slide.eq(slideTotal);
-    }
-    var activeSlide = slide.eq(slideCurrent);
-    if (slideCurrent < slideTotal) {
-      var proactiveSlide = slide.eq(slideCurrent + 1);
-    } else {
-      var proactiveSlide = slide.eq(0);
-
-    }
-
-    slide.each(function() {
-      var thisSlide = this;
-      if (thisSlide.hasClass('preactivede')) {
-        thisSlide.removeClass('preactivede preactive active proactive').addClass('proactivede');
-      }
-      if (thisSlide.hasClass('preactive')) {
-        thisSlide.removeClass('preactive active proactive proactivede').addClass('preactivede');
-      }
-    });
-    preactiveSlide.removeClass('preactivede active proactive proactivede').addClass('preactive');
-    activeSlide.removeClass('preactivede preactive proactive proactivede').addClass('active');
-    proactiveSlide.removeClass('preactivede preactive active proactivede').addClass('proactive');
+    document.getElementsByClassName('carousel')[0].style.transform = 'rotateY(' + currAngle + 'deg)';
   };
-
-  this.slideLeft = function () {
-    if (slideCurrent > 0) {
-      slideCurrent--;
-    } else {
-      slideCurrent = slideTotal;
-    }
-
-    if (slideCurrent < slideTotal) {
-      var proactiveSlide = slide.eq(slideCurrent + 1);
-    } else {
-      var proactiveSlide = slide.eq(0);
-    }
-    var activeSlide = slide.eq(slideCurrent);
-    if (slideCurrent > 0) {
-      var preactiveSlide = slide.eq(slideCurrent - 1);
-    } else {
-      var preactiveSlide = slide.eq(slideTotal);
-    }
-    slide.each(function() {
-      var thisSlide = this;
-      if (thisSlide.hasClass('proactivede')) {
-        thisSlide.removeClass('preactive active proactive proactivede').addClass('preactivede');
-      }
-      if (thisSlide.hasClass('proactive')) {
-        thisSlide.removeClass('preactivede preactive active proactive').addClass('proactivede');
-      }
-    });
-    preactiveSlide.removeClass('preactivede active proactive proactivede').addClass('preactive');
-    activeSlide.removeClass('preactivede preactive proactive proactivede').addClass('active');
-    proactiveSlide.removeClass('preactivede preactive active proactivede').addClass('proactive');
-  };
-
-  this.slideInitial();
 }
