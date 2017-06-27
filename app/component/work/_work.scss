@@ -2,13 +2,32 @@
   height: 100%;
   width:100%;
 
-
+  img{
+    height: 100%;
+    width: 30%;
+    max-width: 150px;
+    // max-height: 150px;
+    // border-radius: $gutter * 50;
+    // margin-top: $gutter;
+  }
+  .left, .right{
+    width:50%;
+    height:100%;
+    display: inline-block;
+    background-size: 100% 100%;
+  }
+.left{
+  background-image: linear-gradient(to right, green,red);
+}
+.right{
+  float: right;
+}
 
   .container {
     margin: 0 auto;
-    margin-top: 25%;
-    width: 250px;
-    height: 200px;
+    margin-top: $gutter * 3;
+    width: 50%;
+    height: 50%;
     position: relative;
     perspective: 1000px;
   }
@@ -24,23 +43,25 @@
   .item {
     display: block;
     position: absolute;
-    background: #000;
-    width: 250px;
-    height: 200px;
+    background: $white;
+    border: 1px solid $black;
+    width: 45vw;
+    height: 35vh;
     font-size: 1em;
     text-align: center;
-    color: #FFF;
-    opacity: 0.95;
-    border-radius: 10px;
+    color: $black;
+    // opacity: 0.95;
+    // border-radius: $gutter;
   }
-
 
   .next, .prev {
     font-size: 2em;
     position: absolute;
     padding: 1em 2em;
+    height: 100%;
+    width: 45%;
     cursor: pointer;
   }
-  .next { right: 0em; }
-  .prev { left: 0em; }
+  .next { right: 0; }
+  .prev { left: 0; }
 }

@@ -6,11 +6,16 @@
             id="$index"
             ng-style="workCtrl.transform($index)"
             >
-            <li class="one">{{x.name}}</li>
+            <div class="left" style="background-image: url({{x.image}})">{{x.name}}</div>
+            <div class="right">
+
+            </div>
+            <!-- <img src=x.image alt="Bhavya Bharti"> -->
           </div>
     </div>
 </div>
-<div ng-click="workCtrl.rotate($event)" class="prev">&#10096</div>
-<div ng-click="workCtrl.rotate($event)" class="next">&#10097</div>
+<div ng-click="workCtrl.rotate($event)" class="prev"></div>
+<div ng-click="workCtrl.rotate($event)" class="next"></div>
 </div>
 </section>
+<!-- &#10096 -->

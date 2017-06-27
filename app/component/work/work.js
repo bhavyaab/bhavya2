@@ -17,7 +17,8 @@ function WorkController($log, $location) {
       github: 'https://github.com/bhavyaab/inbox-health',
       description: 'inbox-health is all about xyz',
       technical: 'gamil api jquery js sql Handelbar templates',
-      image: 'app/assets/inbox-health.jpg'
+      // image: 'app/assets/inbox-health.svg'
+      image: 'http://inbox-health.herokuapp.com/'
     },
     {
       name: 'wheatlessly',
@@ -45,7 +46,8 @@ function WorkController($log, $location) {
 
   this.transform = function(i){
     return {'transform': 'rotateY(' + i * this.angle + 'deg) translateZ(' + this.zindex + ')',
-      'background-color' : color[i]};
+      // 'background-color' : color[i]
+    };
   };
   var currAngle = 0;
   this.rotate = function(event){
