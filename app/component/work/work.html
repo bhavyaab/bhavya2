@@ -1,16 +1,16 @@
 <section class="work">
 <div class="container">
 <div class="carousel">
-      <div ng-repeat="x in workCtrl.projects"
+      <div  ng-repeat="x in workCtrl.projects"
             class="item"
             id="$index"
             ng-style="workCtrl.transform($index)"
             >
-            <div class="left" style="background-image: url({{x.image}})">{{x.name}}</div>
-            <div class="right">
-
+            <div class="project-header" style="background-image: url({{x.image}})">
+            <div class="project-info">
+              <p>Technical Description: {{x.technical}}</p>
             </div>
-            <!-- <img src=x.image alt="Bhavya Bharti"> -->
+          </div>
           </div>
     </div>
 </div>

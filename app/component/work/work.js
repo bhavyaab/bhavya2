@@ -18,7 +18,7 @@ function WorkController($log, $location) {
       description: 'inbox-health is all about xyz',
       technical: 'gamil api jquery js sql Handelbar templates',
       // image: 'app/assets/inbox-health.svg'
-      image: 'http://inbox-health.herokuapp.com/'
+      image: 'http://inbox-health.herokuapp.com/img/fullLogo.svg'
     },
     {
       name: 'wheatlessly',
@@ -26,23 +26,23 @@ function WorkController($log, $location) {
       github: 'https://github.com/jmpaik/wheatlessly',
       description: 'wheatlessly is all about xyz',
       technical: 'node, angular, sass, webpack',
-      image: 'app/assets/bhavya.jpg'
+      image: 'app/assets/wheatlessly.jpg'
     },
     {
       name: 'wheatlessIn',
       url: 'http://www.wheatlessly.com/ ',
       github: 'https://github.com/jmpaik/wheatlessinv2',
       description: 'wheatlessIn is all about xyz',
-      technical: 'REST API node.js, angularJS and expressJS server, uses MongoDB and AWS S3 database',
-      image: 'app/assets/bhavya2.jpg'
+      technical: 'REST API node.js, angularJS expressJS MongoDB and AWS S3 database',
+      image: 'app/assets/cloud-storage.jpg'
     }
   ];
 
-  var color = ['red', 'blue', 'green', 'yellow', 'pink', 'purple', 'green'];
+
   // var width = document.getElementsByClassName('item')[0].offsetWidth;
   // console.log('width == ', width, ' width -- ', width.clientWidth);
   this.angle = 360/(this.projects.length);
-  this.zindex = '250px';
+  this.zindex = '280px';
 
   this.transform = function(i){
     return {'transform': 'rotateY(' + i * this.angle + 'deg) translateZ(' + this.zindex + ')',
