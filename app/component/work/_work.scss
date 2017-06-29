@@ -1,18 +1,32 @@
 .work{
-  height: 100%;
-  width:100%;
+  min-height: 100%;
+  width: 100%;
+  font-size: 75%;
+
   .container {
     width: 80%;
+    height: 45vh;
     margin: $gutter 0 $gutter $gutter * 2;
   }
 .project-header{
-  min-height:45vh;
+  min-height:100%;;
   width: 100%;
   position: relative;
   background-size: 100% 100%;
   background-repeat: no-repeat;
-  // box-shadow: 10px 10px 5px #333;
   box-shadow: 2px 4px 8px 2px rgba(0,0,0,0.16);
+  a{
+    background-color: #ce191a;
+    color: #fff;
+    position: absolute;
+    top: 65%;
+    left: 65%;
+  }
+}
+h2{
+  width: 100%;
+  text-align: center;
+  padding:  $gutter*2;
 }
 .project-info{
   min-height: 20%;
@@ -27,6 +41,12 @@
     margin-left: $gutter*2;
     padding: $gutter;
   }
-}
 
+}
+@media screen and (min-width:450px){
+  .project-header > h2{
+    text-align: left;
+  }
+
+}
 }

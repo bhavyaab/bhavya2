@@ -1,9 +1,12 @@
 <section class="work">
     <div class="container" ng-repeat="x in workCtrl.projects">
       <div class="project-header" style="background-image: url({{x.image}})">
+        <h2>{{x.name}}</h2>
         <div class="project-info">
           <p>Technical Description: {{x.technical}}</p>
         </div>
+        <a class="btn"
+        href={{x.url}} target="_blank">{{x.button}}</a>
       </div>
     </div>
 </section>

@@ -15,25 +15,28 @@ function WorkController($log, $location) {
       name: 'Inbox Health',
       url: 'http://inbox-health.herokuapp.com/',
       github: 'https://github.com/bhavyaab/inbox-health',
+      button: 'Visit site',
       description: 'inbox-health is all about xyz',
       technical: 'gamil api jquery js sql Handelbar templates',
-      image: 'app/assets/inbox-health-2.png'
+      image: 'http://inbox-health.herokuapp.com/img/fullLogo.svg'
     },
     {
       name: 'wheatlessly',
       url: 'http://www.wheatlessly.com/ ',
       github: 'https://github.com/jmpaik/wheatlessly',
+      button: 'Visit site',
       description: 'wheatlessly is all about xyz',
       technical: 'node, angular, sass, webpack',
-      image: 'app/assets/wheatlessly.png'
+      image: 'app/assets/wheatlessly.jpg'
     },
     {
       name: 'wheatlessIn',
-      url: 'http://www.wheatlessly.com/ ',
+      url: 'https://github.com/jmpaik/wheatlessinv2',
       github: 'https://github.com/jmpaik/wheatlessinv2',
+      button: 'Visit github',
       description: 'wheatlessIn is all about xyz',
       technical: 'REST API node.js, angularJS and expressJS server, uses MongoDB and AWS S3 database',
-      image: 'app/assets/server-backend-development.png'
+      image: 'app/assets/backend.jpg'
     }
   ];
 
