@@ -1,11 +1,30 @@
 <section class="contact">
 <!-- <li class="one">contact</li> -->
-<div class="left"></div>
+<div class="left">
+  <h3>Say Hello..</h3>
+  <form ng-submit="contactCtrl.email()">
+
+  <!-- <label for="name"></label> -->
+  <input ng-model="contactCtrl.form.name" type="text" id="name" placeholder="Your name..">
+
+  <!-- <label for="email"></label> -->
+  <input ng-model="contactCtrl.form.email" type="email" id="email" placeholder="Your email..">
+  <!-- <label for="subject"></label> -->
+  <textarea ng-model="contactCtrl.form.message" id="message" placeholder="Write something.."></textarea>
+
+  <input type="submit" value="Send it" ng-click="Submit">
+
+</form>
+</div>
 <div class="right">
-  <p>
-    <li>email: <span></span></li>
-    <li>phone: <span></span></li>
-    <li>linkedIn: <span></span></li>
-  </p>
+  <ul>
+    <li>Email: <span>bhavyab@outlook.com</span></li>
+    <!-- <li>Phone: <span></span></li> -->
+    <li>
+      <span><a href="https://www.linkedin.com/in/bhavyabharti/" target="_blank">LinkedIn</a></span>
+      <span><a href="https://github.com/bhavyaab" target="_blank">Github</a></span>
+      <span><a href="https://gist.github.com/bhavyaab/696ed698879cc3ee01b3811871b07d0f" target="_blank">Gist</a></span>
+    </li>
+  </ul>
 </div>
 </section>
