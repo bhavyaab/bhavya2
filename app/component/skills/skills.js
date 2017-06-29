@@ -29,25 +29,31 @@ function SkillsController($log, $location) {
     js: {
       name: 'JAVASCRIPT',
       star: 4,
-      detail: 'JAVASCRIPT JAVASCRIPT JAVASCRIPT JAVASCRIPT',
+      detail: 'I use JavaScript to develop the application for client-side to make web pages interactive.',
       showDetail: false
     },
     jq: {
       name: 'JQUERY',
       star: 4,
-      detail: 'jquery jquery jquery jquery',
+      detail: 'I use the jQuery library to handling events, to produce effects and simple animations, to DOM manipulation.',
       showDetail: false
     },
     node: {
       name: 'NODE JS',
       star: 4,
-      detail: 'node node node node ',
+      detail: 'I use node environment to integrate different library.',
       showDetail: false
     },
     angular: {
       name: 'ANGULAR JS',
       star: 4,
-      detail: 'angular angular angular angular',
+      detail: 'I use angular to develop this application front end. I can use and develop angularJS directive component service to develop a custom build module.',
+      showDetail: false
+    },
+    saas: {
+      name: 'SAAS',
+      star: 4,
+      detail: 'I use saas for styling purpose and to develop the theme for sites. I this application saas is been transformed CSS3 by using web pack.',
       showDetail: false
     },
     responsive: {
