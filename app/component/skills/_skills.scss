@@ -19,7 +19,11 @@ div{
   margin-top: 35%;
   text-align: center;
 }
-
+.under{
+  padding: $gutter * 2;
+  text-align:justify;
+  background-color: $white;
+}
 .right ul{
   width: 80%;
   height: 80%;
@@ -42,6 +46,9 @@ div{
   .left{
     display: block;
     left: 50%;
+  }
+  .under{
+    display: none;
   }
 }
 

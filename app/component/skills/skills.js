@@ -62,10 +62,16 @@ function SkillsController($log, $location) {
       detail:'Good knowledge developing responsive web layout. Try to resize your browser to see what happen or try to view this website with your iPhone.',
       showDetail: false
     },
-    AWS_S3: {
+    aws: {
       name: 'AWS S3',
       star: 3,
       detail:'Good knowledge with various API operations, related request and response structures, authentication, and error codes. I frequently use AWS s3 cloud storage for storing data and other operation.',
+      showDetail: false
+    },
+    bootstrap: {
+      name: 'Bootstrap',
+      star: 3,
+      detail:'Good knowledge using bootstrap and angular bootstrap for speedup styling',
       showDetail: false
     }
   };
