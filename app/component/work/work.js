@@ -43,7 +43,7 @@ function WorkController($log, $location) {
 
 
   // var width = document.getElementsByClassName('item')[0].offsetWidth;
-  // console.log('width == ', width, ' width -- ', width.clientWidth);
+  // $log.debug('width == ', width, ' width -- ', width.clientWidth);
   this.angle = 360/(this.projects.length);
   this.zindex = '280px';
 
