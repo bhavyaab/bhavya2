@@ -33,9 +33,10 @@ function ContactController($log, $location) {
     'SaveToSentItems': 'false'
   };
   this.email = function(){
-    if(!this.form.name) return $log.debug('name not found!');
-    if(!this.form.email) return $log.debug('email not found!');
-    if(!this.form.message) return $log.debug('message not found!');
+    console.log(this.form);
+    if(!this.form.name) return console.log('name not found!');
+    if(!this.form.email) return console.log('email not found!');
+    if(!this.form.message) return console.log('message not found!');
 
 
 
