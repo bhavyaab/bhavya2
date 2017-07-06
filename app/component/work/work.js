@@ -32,9 +32,9 @@ function WorkController($log, $location) {
       name: 'wheatlessIn',
       url: 'http://www.wheatlessly.com/ ',
       github: 'https://github.com/jmpaik/wheatlessinv2',
-      description: 'wheatlessIn is all about xyz',
+      description: 'It is a backend only which serves wheatlessly REST API.',
       technical: 'REST API node.js, angularJS expressJS MongoDB and AWS S3 database',
-      image: 'app/assets/cloud-storage.jpg'
+      image: 'app/assets/backend.jpg'
     }
   ];
 
