@@ -2,12 +2,10 @@
 <div class="right">
  <ul>
    <li
-   ng-mouseenter="skillsCtrl.default = false"
-   ng-mouseleave="skillsCtrl.default = true"
+   ng-mouseenter="skillsCtrl.default = false; x.showDetail = true"
+   ng-mouseleave="skillsCtrl.default = true; x.showDetail = false"
    ng-repeat="x in skillsCtrl.mySkills">
      <span
-     ng-mouseenter="x.showDetail = true"
-     ng-mouseleave="x.showDetail = false"
      class="responsive"
      >{{x.name}}</span>
      <span class="rating">

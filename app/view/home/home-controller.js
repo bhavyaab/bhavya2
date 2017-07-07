@@ -13,7 +13,7 @@ function homeController($log, $location){
   this.display = {
     about:false,
     skills:false,
-    work: true,
-    contact: false
+    work: false,
+    contact: true
   };
 }
