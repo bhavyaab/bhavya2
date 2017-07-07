@@ -35,3 +35,9 @@ context.keys().forEach( key => {
   let module = context(key);
   app.component(name, module);
 });
+
+context = require.context('./assets/', true, /\.js$/);
+context.keys().forEach( key => {
+  let name = pascalcase(path.basename(key, '.jpg' || '.png'));
+  app.controller(name, context(key));
+});
