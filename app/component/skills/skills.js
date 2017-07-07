@@ -77,7 +77,7 @@ function SkillsController($log, $location) {
   };
 
   this.displayContent = function(){
-    console.log('displayContent clicked');
+    $log.debug('displayContent clicked');
 
 
   };

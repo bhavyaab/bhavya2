@@ -32,18 +32,27 @@ function WorkController($log, $location) {
     },
     {
       name: 'wheatlessIn',
-      url: 'http://www.wheatlessly.com/ ',
+      url: 'https://github.com/jmpaik/wheatlessinv2',
       github: 'https://github.com/jmpaik/wheatlessinv2',
       button: 'Visit DOC',
       description: 'It is web service serving Wheatlessly app, built using node.js, angularJS and expressJS server, uses MongoDB and AWS S3 database.',
       technical: 'REST API node.js, angularJS expressJS MongoDB and AWS S3 database, trivas CI.',
       image: 'app/assets/backend.jpg'
+    },
+    {
+      name: 'Portfolio',
+      url: 'https://bhavya2.herokuapp.com/',
+      github: 'https://github.com/jmpaik/bhavya2',
+      button: 'Visit site',
+      description: 'It is a front end portfolio and deployed on heroku.',
+      technical: 'Bootstrap, node.js, angularJS, webpack',
+      image: 'https://s-media-cache-ak0.pinimg.com/736x/f6/eb/63/f6eb6350bf4032462e74d29f19f4594d.jpg'
     }
   ];
 
 
   // var width = document.getElementsByClassName('item')[0].offsetWidth;
-  // console.log('width == ', width, ' width -- ', width.clientWidth);
+  // $log.debug('width == ', width, ' width -- ', width.clientWidth);
   this.angle = 360/(this.projects.length);
   this.zindex = '280px';
 

@@ -11,10 +11,10 @@ module.exports = {
 
 function TabsController($log, $location) {
   $log.debug('TabsController');
-  console.log('tabs - ',this.display);
+  $log.debug('tabs - ',this.display);
 
   this.$onInit = function(){
-    console.log('tabs on init- ',this.display);
+    $log.debug('tabs on init- ',this.display);
     return this.display;
   };
   var hideAll = function(){
@@ -26,14 +26,14 @@ function TabsController($log, $location) {
   };
 
   this.changeAbout = function(){
-    console.log('call about');
+    $log.debug('call about');
     hideAll();
     this.$onInit = function(){
       this.display.about = true;
     };
   };
   this.changeSkills = function(){
-    console.log('call Skills');
+    $log.debug('call Skills');
     hideAll();
     this.display.skills = true;
   };
