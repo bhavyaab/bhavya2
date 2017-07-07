@@ -14,6 +14,6 @@ function homeController($log, $location){
     about:true,
     skills:false,
     work: false,
-    contact: true
+    contact: false,
   };
 }
