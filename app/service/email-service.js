@@ -1,12 +1,12 @@
 'use strict';
 
+let nodemailer = require('nodemailer');
 module.exports = ['$q', '$log', '$http', emailService];
 
 function emailService($q, $log, $http){
   $log.debug('emailService');
 
   let service = {};
-  let nodemailer = require('nodemailer');
 
   service.transporter = nodemailer.createTransport({
     service: 'gmail',

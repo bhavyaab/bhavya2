@@ -41,7 +41,7 @@ module.exports = {
     `${__dirname}/node_modules/bootstrap/scss/`,
     `${__dirname}/app/scss`
   ] },
-
+  target: 'node',
   module: {
     loaders: [{
       test: /\.js$/,
