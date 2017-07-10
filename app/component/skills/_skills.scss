@@ -30,15 +30,16 @@ div{
   height: 80%;
   margin-left: $gutter * 2;
   margin-top: $gutter * 4;
+  overflow-y: hidden;
 }
 .right li {
   cursor: pointer;
   margin-bottom: $gutter/4;
+  padding: $gutter/2;
+  border-radius: 5px;
 }
-// .right li{
-//   padding: $gutter/2;
+// .right li:hover{
 //   background-color: rgba(8,8,8,0.78);
-//   border-radius: 5px;
 //   span{
 //     color: $white;
 //   }

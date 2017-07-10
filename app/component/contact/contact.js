@@ -2,11 +2,11 @@
 
 module.exports = {
   template: require('./contact.html'),
-  controller: ['$log', '$location', ContactController],
+  controller: ['$log', '$location', 'emailService', ContactController],
   controllerAs: 'contactCtrl'
 };
 
-function ContactController($log, $location) {
+function ContactController($log, $location, emailService) {
   $log.debug('ContactController');
 
   this.form = {
@@ -28,6 +28,8 @@ function ContactController($log, $location) {
         text: this.form.message
       }
     };
+
+    emailService.sendMail(this.form);
     // var nodemailer = require('nodemailer');
     //
     // var transporter = nodemailer.createTransport({
