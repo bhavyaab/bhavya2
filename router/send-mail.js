@@ -16,7 +16,7 @@ var mailOptions = {
   text: 'That was easy!'
 };
 
-sendMail.post('/contact', jsonParser, function(req, res) {
+sendMail.post('contact', jsonParser, function(req, res) {
 
   var data = req.body;
 
