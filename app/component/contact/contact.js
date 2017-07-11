@@ -16,18 +16,11 @@ function ContactController($log, $location, emailService) {
   };
 
   this.email = function(){
-    $log.debug(this.form);
     if(!this.form.name) $log.debug('name not found!');
     if(!this.form.email) $log.debug('email not found!');
     if(!this.form.message) $log.debug('message not found!');
 
-    var mailOptions = {
-      text: {
-        contact: this.form.email,
-        name: this.form.name,
-        text: this.form.message
-      }
-    };
+
 
     emailService.sendMail(this.form);
     // var nodemailer = require('nodemailer');
