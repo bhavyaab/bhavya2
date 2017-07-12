@@ -23,9 +23,9 @@ function emailService($q, $log, $http){
       data: JSON.stringify(form),
       config: config
     }).then(function successCallback(response) {
-      $log.debug('email send -- ','response data -- '+ response.data);
+      console.log('email send -- ',response, 'response data -- '+ response.data);
     }, function errorCallback(response) {
-      $log.debug('error occured -- ', response);
+      console.log('error occured -- ', response);
     });
   };
   return service;

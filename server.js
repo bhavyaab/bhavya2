@@ -1,11 +1,9 @@
 'use strict';
 
 const express = require('express');
-const dotenv = require('dotenv');
-
+const dotenv = require('dotenv').load();
 
 const app = express();
-dotenv.load();
 const PORT = process.env.PORT || 3000;
 
 const sendMail = require('./router/send-mail.js');

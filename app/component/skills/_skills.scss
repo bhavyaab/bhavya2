@@ -35,15 +35,9 @@ div{
 .right li {
   cursor: pointer;
   margin-bottom: $gutter/4;
-  padding: $gutter/2;
   border-radius: 5px;
 }
-// .right li:hover{
-//   background-color: rgba(8,8,8,0.78);
-//   span{
-//     color: $white;
-//   }
-// }
+
 .rating{
   float: right;
 }
