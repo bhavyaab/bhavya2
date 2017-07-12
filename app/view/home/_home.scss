@@ -4,11 +4,16 @@
   width: 100%;
 .keep{
   height: 10vh;
+  display: none;
 }
   .content_display{
     min-height: 60vh;
     width: 100%;
     position: relative;
   }
-
+@media screen and (min-height: 600px){
+  .keep{
+    display: block;
+  }
+}
 }
