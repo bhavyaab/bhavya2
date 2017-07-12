@@ -15,7 +15,7 @@
  .left{
    form{
      width: 90%;
-     height: 25vh;
+     min-height: 25vh;
      margin: $gutter;
    }
 
@@ -60,7 +60,7 @@
      width: 60%;
    }
    .right{
-     display: block;
+    //  display: block;
      width: 40%;
      height: 100%;
      top:25%;
