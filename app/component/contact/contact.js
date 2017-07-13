@@ -16,26 +16,11 @@ function ContactController($log, $location, emailService) {
   };
 
   this.email = function(){
-    $log.debug(this.form);
-    if(!this.form.name) return $log.debug('name not found!');
-    if(!this.form.email) return $log.debug('email not found!');
-    if(!this.form.message) return $log.debug('message not found!');
+    if(!this.form.name) $log.debug('name not found!');
+    if(!this.form.email) $log.debug('email not found!');
+    if(!this.form.message) $log.debug('message not found!');
 
-    emailService.mailOptions = {
-      from: this.form.email,
-      text: {
-        name: this.form.name,
-        text: this.form.message
-      }
-    };
 
-    emailService.transporter.sendMail(mailOptions, function(error, info){
-      if (error) {
-        console.log(error);
-      } else {
-        console.log('Email sent: ' + info.response);
-      }
-    });
-
+    emailService.sendMail(this.form);
   };
 }

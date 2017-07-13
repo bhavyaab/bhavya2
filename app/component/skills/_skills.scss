@@ -26,15 +26,18 @@ div{
   background-color: $white;
 }
 .right ul{
-  width: 80%;
+  width: 78%;
   height: 80%;
   margin-left: $gutter * 2;
   margin-top: $gutter * 4;
+  overflow-y: hidden;
 }
 .right li {
   cursor: pointer;
   margin-bottom: $gutter/4;
+  border-radius: 5px;
 }
+
 .rating{
   float: right;
 }

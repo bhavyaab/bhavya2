@@ -10,7 +10,7 @@ const ngAnimate = require('angular-animate');
 const ngDialog = require('ng-dialog');
 const uiBootstrap = require('angular-ui-bootstrap');
 
-const app = angular.module('profolio', [uiRouter, ngFileUpload, ngAnimate, ngDialog, uiBootstrap]);
+const app = angular.module('portfolio', [uiRouter, ngFileUpload, ngAnimate, ngDialog, uiBootstrap]);
 
 let context = require.context('./config/', true, /\.js$/);
 context.keys().forEach( path => {
@@ -35,3 +35,6 @@ context.keys().forEach( key => {
   let module = context(key);
   app.component(name, module);
 });
+
+context = require.context('./assets/', true, /\.(jpg|jpeg|svg|bmp|tiff|gif|png)$/);
+context.keys().forEach( key => {});
