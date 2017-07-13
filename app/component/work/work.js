@@ -28,7 +28,7 @@ function WorkController($log, $location, $element) {
       button: 'Visit site',
       description: ' Wheatlessly, is a dedicated gluten free web and mobile application that allows users to signin/signout and post their business. It also uses Google geocoder API to locate businesses.',
       technical: 'NodeJs, Angular, Sass, webpack, Karma,',
-      image: './app/assets/wheatlessly.jpg'
+      image: './assets/wheatlessly.jpg'
     },
     {
       name: 'wheatlessIn',
@@ -37,12 +37,12 @@ function WorkController($log, $location, $element) {
       button: 'Visit DOC',
       description: 'It is web service serving Wheatlessly app, built using node.js, angularJS and expressJS server, uses MongoDB and AWS S3 database.',
       technical: 'REST API node.js, angularJS expressJS MongoDB and AWS S3 database, trivas CI.',
-      image: './app/assets/backend.jpg'
+      image: './assets/backend.jpg'
     },
     {
       name: 'Portfolio',
-      url: 'https://bhavyab.herokuapp.com/',
-      github: 'https://github.com/bhavyaab/bhavya',
+      url: 'https://bhavya2.herokuapp.com/',
+      github: 'https://github.com/bhavyaab/bhavya2',
       button: 'Visit site',
       description: 'It is a front end portfolio and deployed on heroku.',
       technical: 'Bootstrap, node.js, angularJS, webpack',
