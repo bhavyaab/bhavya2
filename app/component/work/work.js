@@ -9,6 +9,29 @@ module.exports = {
 function WorkController($log, $location, $element) {
   $log.debug('WorkController');
 
+  var width = $element[0].childNodes[0].childNodes[1].childNodes[1].offsetWidth * 0.5;
+  this.angle = 360/(this.projects.length);
+  this.zindex = width + 'px' || '280px';
+  console.log('width -  ' ,$element[0].childNodes[0].childNodes[1].childNodes[1].offsetWidth, 'this.zindex ==',this.zindex);
+
+  this.transform = function(i){
+    return {'transform': 'rotateY(' + i * this.angle + 'deg) translateZ(' + this.zindex + ')',
+      // 'background-color' : color[i]
+    };
+  };
+  var currAngle = 0;
+  this.rotate = function(event){
+    var elementClass = event.target.className;
+    if(elementClass === 'next'){
+      currAngle = currAngle - this.angle;
+    } else if(elementClass === 'prev'){
+      currAngle = currAngle + this.angle;
+    }
+
+    document.getElementsByClassName('carousel')[0].style.transform = 'rotateY(' + currAngle + 'deg)';
+
+  };
+
 
   this.projects = [
     {
@@ -50,25 +73,4 @@ function WorkController($log, $location, $element) {
     }
   ];
 
-  var width = $element[0].childNodes[0].childNodes[1].childNodes[1].offsetWidth * 0.9;
-  this.angle = 360/(this.projects.length);
-  this.zindex = width + 'px' || '280px';
-  console.log('width -  ' ,$element[0].childNodes[0].childNodes[1].childNodes[1].offsetWidth, 'this.zindex ==',this.zindex);
-
-  this.transform = function(i){
-    return {'transform': 'rotateY(' + i * this.angle + 'deg) translateZ(' + this.zindex + ')',
-      // 'background-color' : color[i]
-    };
-  };
-  var currAngle = 0;
-  this.rotate = function(event){
-    var elementClass = event.target.className;
-    if(elementClass === 'next'){
-      currAngle = currAngle - this.angle;
-    } else if(elementClass === 'prev'){
-      currAngle = currAngle + this.angle;
-    }
-
-    document.getElementsByClassName('carousel')[0].style.transform = 'rotateY(' + currAngle + 'deg)';
-  };
 }
