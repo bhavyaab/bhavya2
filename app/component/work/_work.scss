@@ -3,8 +3,7 @@
   width:100%;
 
   .container {
-    margin: 0 auto;
-    margin-top: $gutter;
+    margin-top: $gutter * 4;
     width: 50%;
     min-height: 50%;
     position: relative;
@@ -76,13 +75,13 @@
   .next { right: 0; }
   .prev { left: 0; }
   @media screen and (min-width: 650px){
-    .project-info{
-      top: $gutter * 4;
+    .container{
+    margin-top: $gutter;
     }
   }
   @media screen and (min-height: 830px){
     .project-info{
-      top: $gutter;
+      top: $gutter * 4;
       h2{
         display: none;
       }

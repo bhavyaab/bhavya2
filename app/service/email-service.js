@@ -1,34 +1,32 @@
 'use strict';
 
-module.exports = ['$q', '$log', '$http', 'nodemailer', emailService];
+module.exports = ['$q', '$log', '$http', emailService];
 
-function emailService($q, $log, $http, nodemailer){
+function emailService($q, $log, $http){
   $log.debug('emailService');
 
   let service = {};
-  service.transporter = nodemailer.createTransport({
-    service: 'gmail',
-    auth: {
-      user: 'bhavyamacet@gmail.com',
-      pass: 'CanCel0023',
-    },
-
-  });
-
-  service.mailOptions = {
-    from: 'bhavyamacet@gmail.com',
-    to: 'bhavyamacet@gmail.com',
-    subject: 'Email from portfolio',
-    text: 'That was easy!'
+  let url = `${__API_URL__}/contact`;
+  let config = {
+    headers: {
+      'Content-Type': 'application/json',
+      'Accept': 'application/json',
+    }
   };
 
-  service.transporter.sendMail(service.mailOptions, function(error, info){
-    if (error) {
-      console.log(error);
-    } else {
-      console.log('Email sent: ' + info.response);
-    }
-  });
+  service.sendMail = function(form){
+    console.log('email service form recieved - ' , form);
 
+    return $http({
+      method: 'POST',
+      url: url,
+      data: JSON.stringify(form),
+      config: config
+    }).then(function successCallback(response) {
+      console.log('email send -- ',response, 'response data -- '+ response.data);
+    }, function errorCallback(response) {
+      console.log('error occured -- ', response);
+    });
+  };
   return service;
 }

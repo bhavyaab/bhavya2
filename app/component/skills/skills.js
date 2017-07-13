@@ -41,7 +41,7 @@ function SkillsController($log, $location) {
     node: {
       name: 'NODE JS',
       star: 4,
-      detail: 'I use node environment to integrate different library.',
+      detail: 'I use node environment to integrate different library and backend.',
       showDetail: false
     },
     angular: {
