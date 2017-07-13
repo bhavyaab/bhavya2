@@ -36,6 +36,7 @@ div{
   cursor: pointer;
   margin-bottom: $gutter/4;
   border-radius: 5px;
+  padding: 1%;
 }
 
 .rating{
@@ -53,6 +54,11 @@ div{
   }
   .under{
     display: none;
+  }
+
+  .right li:hover{
+    background-color: rgba(0,0,0,0.6);
+    color: $white;
   }
 }
 

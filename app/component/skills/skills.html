@@ -5,9 +5,7 @@
    ng-mouseenter="skillsCtrl.default = false; x.showDetail = true"
    ng-mouseleave="skillsCtrl.default = true; x.showDetail = false"
    ng-repeat="x in skillsCtrl.mySkills">
-     <span
-     class="responsive"
-     >{{x.name}}</span>
+     <span class="responsive">{{x.name}}</span>
      <span class="rating">
        <span ng-repeat="number in skillsCtrl.getStars(x.star) track by $index">&#9733;</span>
        <span ng-repeat="number in skillsCtrl.getStars(5 - x.star) track by $index">&#9734;</span>
