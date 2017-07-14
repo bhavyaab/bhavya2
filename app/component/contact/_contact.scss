@@ -13,6 +13,7 @@
     min-height: 45vh;
   }
  .left{
+   display: none;
    form{
      width: 90%;
      min-height: 25vh;
@@ -49,22 +50,22 @@
      padding: $gutter/2;
    }
    span{
-     margin: 0 $gutter/2;
+     margin-right:: $gutter/2;
    }
  }
  @media screen and (min-width: 550px){
    div{
      position: absolute;
    }
-   .left{
-     width: 60%;
-   }
-   .right{
-     display: block;
-     width: 40%;
-     height: 100%;
-     top:25%;
-     left: 60%;
-   }
+  //  .left{
+  //    width: 60%;
+  //  }
+  //  .right{
+  //    display: block;
+  //    width: 40%;
+  //    height: 100%;
+  //    top:25%;
+  //    left: 60%;
+  //  }
  }
  }
