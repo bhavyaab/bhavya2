@@ -18,7 +18,7 @@ sendMail.post('/contact', jsonParser, function(req, res) {
     values: {
       value1: data.email || 'Contact not shared!',
       value2: data.name || 'Name not shared!',
-      value3: data.message || 'No message'
+      value3: data.message || 'hello from portfolio!'
     }
   };
 
