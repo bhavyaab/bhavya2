@@ -6,7 +6,7 @@ function emailService($q, $log, $http){
   $log.debug('emailService');
 
   let service = {};
-  let url = `${__API_URL__}contact`;
+  let url = `${__API_URL__}/contact`;
   let config = {
     headers: {
       'Content-Type': 'application/json',
