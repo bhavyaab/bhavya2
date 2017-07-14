@@ -5,8 +5,10 @@ const Router = require('express').Router;
 const jsonParser = require('body-parser').json();
 var nodemailer = require('nodemailer');
 const dotenv = require('dotenv').load();
-const sendMail = module.exports = new Router();
 var pwd = process.env.PWD;
+const sendMail = module.exports = new Router();
+
+const Sender = require('../model/sender.js');
 
 var mailOptions = {
   from: 'bhavyab@outlook.com',
@@ -23,13 +25,21 @@ sendMail.post('/contact', jsonParser, function(req, res) {
     text: data.message || mailOptions.text
   };
 
-  nodemailer.createTransport({
-    service: 'Outlook365',
-    auth: {
-      user: 'bhavyab@outlook.com',
-      pass: pwd,
-    }
-  }).sendMail(mailOptions)
+  new Sender(mailOptions).save();
+  Sender.find()
   .then(data => res.send(data))
-  .catch(err => res.send(err));
+  .catch(err => res.err(err));
+
+  // nodemailer.createTransport({
+  //   service: 'Outlook365',
+  //   auth: {
+  //     user: 'bhavyab@outlook.com',
+  //     pass: pwd,
+  //   }
+  // })
+  // .sendMail(mailOptions)
+  // .then(data => res.send(data))
+  // .catch(err => res.send(err));
+
+
 });

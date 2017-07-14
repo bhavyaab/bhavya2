@@ -24,7 +24,7 @@ function emailService($q, $log, $http){
       config: config,
       Origin: url
     }).then(function successCallback(response) {
-      $log.debug('email send -- ',response, 'response data -- '+ response.data.responseCode);
+      $log.debug('email send -- ',response, 'response status -- '+ response.data.responseCode);
     }, function errorCallback(response) {
       $log.debug('error occured -- ', response);
     });
