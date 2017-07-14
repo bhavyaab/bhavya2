@@ -16,8 +16,8 @@ sendMail.post('/contact', jsonParser, function(req, res) {
   var request = {
     event: 'portfolio_contact',
     values: {
-      value1: data.email || 'Contact not shared!',
-      value2: data.name || 'Name not shared!',
+      value1: data.name || 'Name not shared!',
+      value2: data.email || 'Contact not shared!',
       value3: data.message || 'hello from portfolio!'
     }
   };
