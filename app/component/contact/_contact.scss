@@ -18,7 +18,19 @@
      min-height: 25vh;
      margin: $gutter;
    }
-
+   .thanks{
+     width: 90%;
+     min-height: 25vh;
+     margin: $gutter;
+     li{
+       text-align: center;
+       font-size: 1.25em;
+     }
+     li:first-child{
+    margin-top: 30%;
+     font-size: 5em;
+     }
+ }
    input, textarea{
     width: 80%;
     margin-left: 10%;
