@@ -1,45 +1,39 @@
 'use strict';
 
 
-const Router = require('express').Router;
 const jsonParser = require('body-parser').json();
-var nodemailer = require('nodemailer');
-const dotenv = require('dotenv').load();
-var pwd = process.env.PWD;
+const Router = require('express').Router;
 const sendMail = module.exports = new Router();
+const dotenv = require('dotenv').load();
 
-const Sender = require('../model/sender.js');
 
-var mailOptions = {
-  from: 'bhavyab@outlook.com',
-  to: 'bhavya@outlook.com',
-  subject: 'Email from portfolio',
-  text: 'That was easy!'
-};
+var apiKey = process.env.IFTTT_KEY;
+var IFTTTMaker = require('iftttmaker')(apiKey);
 
 sendMail.post('/contact', jsonParser, function(req, res) {
   var data = req.body;
-  mailOptions.text = {
-    contact: data.email || 'Contact not shared!',
-    name: data.name || 'Name not shared!',
-    text: data.message || mailOptions.text
+
+  var request = {
+    event: 'portfolio_contact',
+    values: {
+      value1: data.name || 'Name not shared!',
+      value2: data.email || 'Contact not shared!',
+      value3: data.message || 'hello from portfolio!'
+    }
   };
 
-  new Sender(mailOptions).save();
-  Sender.find()
+  IFTTTMaker.send(request, function (error) {
+    if (error) {
+      console.log('The request could not be sent:', error);
+    } else {
+      console.log('Request was sent');
+    }
+  })
   .then(data => res.send(data))
-  .catch(err => res.err(err));
+  .catch(err => res.send(err));
 
-  // nodemailer.createTransport({
-  //   service: 'Outlook365',
-  //   auth: {
-  //     user: 'bhavyab@outlook.com',
-  //     pass: pwd,
-  //   }
-  // })
-  // .sendMail(mailOptions)
-  // .then(data => res.send(data))
-  // .catch(err => res.send(err));
+});
 
-
+sendMail.get('/ping', function(req, res){
+  res.send('I got you!');
 });

@@ -6,7 +6,7 @@ function emailService($q, $log, $http){
   $log.debug('emailService');
 
   let service = {};
-  let url = `${__API_URL__}contact`;
+  let url = `${__API_URL__}/contact`;
   let config = {
     headers: {
       'Content-Type': 'application/json',
@@ -15,14 +15,13 @@ function emailService($q, $log, $http){
   };
 
   service.sendMail = function(form){
-    console.log('email service form recieved - ' , form);
 
     return $http({
       method: 'POST',
       url: url,
       data: JSON.stringify(form),
       config: config,
-      Origin: url
+      origin: url
     }).then(function successCallback(response) {
       $log.debug('email send -- ',response, 'response status -- '+ response.data.responseCode);
     }, function errorCallback(response) {
