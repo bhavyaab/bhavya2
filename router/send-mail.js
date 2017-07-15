@@ -30,7 +30,7 @@ sendMail.post('/contact', jsonParser, function(req, res) {
     }
   })
   .then(data => res.send(data))
-  .catch(err => res.err(err));
+  .catch(err => res.send(err));
 
 });
 
