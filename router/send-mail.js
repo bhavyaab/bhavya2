@@ -21,6 +21,7 @@ sendMail.post('/contact', jsonParser, function(req, res) {
       value3: data.message || 'hello from portfolio!'
     }
   };
+  console.log('request = ', request, 'key ', apiKey);
 
   IFTTTMaker.send(request, function (error) {
     if (error) {
