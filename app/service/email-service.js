@@ -11,7 +11,8 @@ function emailService($q, $log, $http){
     headers: {
       'Content-Type': 'application/json',
       'Accept': 'application/json',
-      'Access-Control-Allow-Origin': '*'
+      'Access-Control-Allow-Origin': url,
+      'Access-Control-Allow-Credentials': true
     }
   };
 
@@ -21,8 +22,7 @@ function emailService($q, $log, $http){
       method: 'POST',
       url: url,
       data: JSON.stringify(form),
-      config: config,
-      Origin: url
+      config: config
     }).then(function successCallback(response) {
       $log.debug('email send -- ',response, 'response status -- '+ response.data.responseCode);
     }, function errorCallback(response) {
