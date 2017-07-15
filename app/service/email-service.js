@@ -15,7 +15,6 @@ function emailService($q, $log, $http){
   };
 
   service.sendMail = function(form){
-    console.log('email service form recieved - ' , form, ' url = ',url);
 
     return $http({
       method: 'POST',
