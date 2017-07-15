@@ -21,7 +21,7 @@ app.get('/', function (req, res, next) {
   next();
 
 });
-// 
-// app.listen(PORT, function(){
-//   console.log('server up:', PORT);
-// });
+
+app.listen(PORT, function(){
+  console.log('server up:', PORT);
+});
