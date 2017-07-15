@@ -33,3 +33,7 @@ sendMail.post('/contact', jsonParser, function(req, res) {
   .catch(err => res.err(err));
 
 });
+
+sendMail.get('/ping', function(req, res){
+  res.send('I got you!');
+});
