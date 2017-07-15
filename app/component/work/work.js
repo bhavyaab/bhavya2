@@ -53,7 +53,6 @@ function WorkController($log, $location, $element) {
   var width = $element[0].childNodes[0].childNodes[1].childNodes[1].offsetWidth * 0.6;
   this.angle = 360/(this.projects.length);
   this.zindex = width + 'px' || '280px';
-  console.log('width -  ' ,$element[0].childNodes[0].childNodes[1].childNodes[1].offsetWidth, 'this.zindex ==',this.zindex);
 
   this.transform = function(i){
     return {'transform': 'rotateY(' + i * this.angle + 'deg) translateZ(' + this.zindex + ')',
