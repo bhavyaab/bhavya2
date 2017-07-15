@@ -13,14 +13,19 @@ const sendMail = require('./router/send-mail.js');
 app.use(sendMail);
 app.use(express.static(`${__dirname}/build`));
 
-app.get('/', function (req, res, next) {
-  console.log('header setting');
-  res.header('Access-Control-Allow-Origin', '*');
-  res.header('Access-Control-Allow-Headers', 'X-Requested-With');
-  console.log('res.header ', res.header);
-  next();
+var allowCrossDomain = function(req, res, next) {
+  if ('OPTIONS' === req.method) {
+    res.header('Access-Control-Allow-Origin', '*');
+    res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,PATCH,OPTIONS');
+    res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization, Content-Length, X-Requested-With');
+    res.send(200);
+  }
+  else {
+    next();
+  }
+};
 
-});
+app.use(allowCrossDomain);
 
 app.listen(PORT, function(){
   console.log('server up:', PORT);
