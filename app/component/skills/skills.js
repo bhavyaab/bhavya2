@@ -53,7 +53,7 @@ function SkillsController($log, $location) {
     saas: {
       name: 'SAAS',
       star: 4,
-      detail: 'I use saas for styling purpose and to develop the theme for sites. I this application saas is been transformed CSS3 by using web pack.',
+      detail: 'I use saas for styling purpose and to develop the theme for sites.',
       showDetail: false
     },
     responsive: {
@@ -63,7 +63,7 @@ function SkillsController($log, $location) {
       showDetail: false
     },
     aws: {
-      name: 'AWS S3',
+      name: 'CLOUD/AWS S3',
       star: 3,
       detail:'Good knowledge with various API operations, related request and response structures, authentication, and error codes. I frequently use AWS s3 cloud storage for storing data and other operation.',
       showDetail: false
