@@ -3,14 +3,14 @@
 module.exports = ['$stateProvider', '$urlRouterProvider', routerConfig];
 
 function routerConfig($stateProvider, $urlRouterProvider) {
-  $urlRouterProvider.when('' , '');
-  $urlRouterProvider.when('/' , '');
+  $urlRouterProvider.when('' , '/about');
+  $urlRouterProvider.when('/' , '/about');
   // $urlRouterProvider.when('/login' , '/join#login');
 
   let states = [
     {
       name: 'home',
-      url: '',
+      url: '/about',
       template: require('../view/home/home.html'),
       controller: 'HomeController',
       controllerAs: 'homeCtrl'

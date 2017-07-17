@@ -1,35 +1,8 @@
 <section class="tabs">
-    <ul>
-    <li
-    ng-click=
-    "tabsCtrl.display.about=true;
-    tabsCtrl.display.skills=false;
-    tabsCtrl.display.contact=false;
-    tabsCtrl.display.work=false";
-    ng-style="tabsCtrl.display.about && {'outline':'1px solid #000'}"
-    >About</li>
-    <li
-    ng-click=
-    "tabsCtrl.display.skills=true;
-    tabsCtrl.display.contact=false;
-    tabsCtrl.display.about=false;
-    tabsCtrl.display.work=false"
-    ng-style="tabsCtrl.display.skills && {'outline':'1px solid #000'}"
-    >Skills</li>
-    <li
-    ng-click=
-    "tabsCtrl.display.work=true;
-    tabsCtrl.display.contact=false;
-    tabsCtrl.display.skills=false;
-    tabsCtrl.display.about=false"
-    ng-style="tabsCtrl.display.work && {'outline':'1px solid #000'}"
-    >Work</li>
-    <li ng-click=
-    "tabsCtrl.display.contact=true;
-    tabsCtrl.display.work=false;
-    tabsCtrl.display.skills=false;
-    tabsCtrl.display.about=false"
-    ng-style="tabsCtrl.display.contact && {'outline':'1px solid #000'}"
-    >Contact</li>
+  <ul>
+    <li ng-click="tabsCtrl.gotoAnchor('top')">About</li>
+    <li ng-click="tabsCtrl.gotoAnchor('workB')">Work</li>
+    <li ng-click="tabsCtrl.gotoAnchor('skillsB')">Skills</li>
+    <li ng-click="tabsCtrl.gotoAnchor('contactB')">Contact</li>
   </ul>
 </section >

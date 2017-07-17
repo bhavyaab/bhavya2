@@ -70,7 +70,7 @@ function SkillsController($log, $location) {
     },
     bootstrap: {
       name: 'Bootstrap',
-      star: 3,
+      star: 5,
       detail:'Good knowledge using bootstrap and angular bootstrap for speedup styling',
       showDetail: false
     }

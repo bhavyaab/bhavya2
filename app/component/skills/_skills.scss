@@ -1,12 +1,10 @@
 .skills{
-  height: 100%;
+  min-height: $section-height;
   width:100%;
   position: relative;
-
 div{
   width: 100%;
-  min-height: 60vh;
-  // border: 2px solid black;
+  min-height: $min-height * 2;
 }
 
 .left{
@@ -14,7 +12,7 @@ div{
 }
 .left p{
   width: 70%;
-  min-height: 45%;
+  min-height: $min-height * 2;
   margin-left: 15%;
   margin-top: 35%;
   text-align: center;
@@ -45,12 +43,13 @@ div{
 
 @media screen and (min-width: 650px){
   div{
-    position: absolute;
     width: 50%;
   }
   .left{
+    position: absolute;
     display: block;
     left: 50%;
+    top: 1%;
   }
   .under{
     display: none;

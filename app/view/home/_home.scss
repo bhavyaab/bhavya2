@@ -1,15 +1,23 @@
 @import './../scss/lib/theme/vars';
 .home{
-  min-height: 95vh;
+  min-height: $section-height;
   width: 100%;
 .keep{
-  height: 10vh;
+  height: $min-height / 2;
   display: none;
+  position: fixed;
 }
-  .content_display{
-    min-height: 60vh;
+header{
+  width: 100%;
+  min-height: $min-height / 2;
+  background-color: $black;
+  color: $white;
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100000px;
+}
+.content_display{
     width: 100%;
-    position: relative;
   }
 @media screen and (min-height: 450px){
   .keep{

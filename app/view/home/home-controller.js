@@ -8,12 +8,7 @@ function homeController($log, $location){
   $log.debug('homeController');
 
   let url = $location.url();
-  this.showHome = url === '' || '/home' || '/';
+  this.showHome = url === '/about';
 
-  this.display = {
-    about:true,
-    skills:false,
-    work: false,
-    contact: false,
-  };
+
 }

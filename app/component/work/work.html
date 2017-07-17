@@ -1,7 +1,7 @@
-<section class="work">
+<section id="workB" class="work">
 <div class="container">
-<div class="carousel">
-      <div  ng-repeat="x in workCtrl.projects"
+<ul class="carousel">
+      <li  ng-repeat="x in workCtrl.projects"
             class="item"
             id="$index"
             ng-style="workCtrl.transform($index)"
@@ -14,9 +14,8 @@
               <a class="btn" href={{x.url}} target="_blank">{{x.button}}</a>
             </div>
           </div>
-          </div>
-    </div>
-</div>
+        </div></li>
+</ul>
 <div ng-click="workCtrl.rotate($event)" class="prev"></div>
 <div ng-click="workCtrl.rotate($event)" class="next"></div>
 </div>
