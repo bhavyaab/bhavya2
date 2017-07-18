@@ -1,6 +1,7 @@
 <section class="tabs">
   <!-- <a class="navbar-brand" href="#"></a> -->
-  <ul>
+  <li class="ham"><img ng-click="tabsCtrl.show=!tabsCtrl.show" src="http://www.coldclimateconstruction.com/images/menu_icon_white.png"/></li>
+  <ul ng-show="tabsCtrl.show">
     <li><a href="#aboutB" du-smooth-scroll du-scrollspy offset="30" >About</a></li>
     <li><a href="#workB" du-smooth-scroll du-scrollspy offset="30">Work</a></li>
     <li><a href="#skillsB" du-smooth-scroll du-scrollspy offset="30">Skills</a></li>
