@@ -2,11 +2,13 @@
 .about{
  min-height: $section-height;
  width: 100%;
- h2{
+ h3{
   font-size: 1.5em;
   padding-bottom: 1em;
   // font-family: 'Vibur', cursive;
-font-family: 'Dawning of a New Day', cursive;
+  font-family: 'Dawning of a New Day', cursive;
+  text-align: center;
+  margin-top: $gutter * 2;
 }
 img{
   height: 30%;
