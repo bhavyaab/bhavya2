@@ -27,7 +27,7 @@ function WorkController($log, $location) {
       button: 'Visit site',
       description: 'wheatlessly is all about xyz',
       technical: 'node, angular, sass, webpack',
-      image: 'app/assets/wheatlessly.jpg'
+      image: 'app/assets/wheatlessly.jpg' || 'http://www.wheatlessly.com/image/990e4c2724a57f2d2da3aca1f3bb211c.jpg',
     },
     {
       name: 'wheatlessIn',
@@ -36,29 +36,7 @@ function WorkController($log, $location) {
       button: 'Visit github',
       description: 'wheatlessIn is all about xyz',
       technical: 'REST API node.js, angularJS and expressJS server, uses MongoDB and AWS S3 database',
-      image: 'app/assets/backend.jpg'
+      image: 'app/assets/backend.jpg' || 'http://devana.rs/blog/wp-content/uploads/2015/10/backend.jpg',
     }
   ];
-
-  // var color = ['red', 'blue', 'green', 'yellow', 'pink', 'purple', 'green'];
-  // var width =  document.getElementsByClassName('item');
-  // console.log('width == ', width, ' width -- ', width.clientWidth);
-  // this.angle = 360/(this.projects.length);
-  // this.zindex = width / 2 || '250px';
-  //
-  // this.transform = function(i){
-  //   return {'transform': 'rotateY(' + i * this.angle + 'deg) translateZ(' + this.zindex + ')',
-  //     'background-color' : color[i]};
-  // };
-  // var currAngle = 0;
-  // this.rotate = function(event){
-  //   var elementClass = event.target.className;
-  //   if(elementClass === 'next'){
-  //     currAngle = currAngle - this.angle;
-  //   } else if(elementClass === 'prev'){
-  //     currAngle = currAngle + this.angle;
-  //   }
-  //
-  //   document.getElementsByClassName('carousel')[0].style.transform = 'rotateY(' + currAngle + 'deg)';
-  // };
 }
