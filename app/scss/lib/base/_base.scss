@@ -5,6 +5,10 @@
   text-decoration: none;
   box-sizing: border-box;
 }
+html{
+  background-color: $black;
+  color: $white;
+}
 body{
   // font-family: "Helvetica Neue", 'Nunito',Helvetica, Arial, sans-serif;
   font-family: 'Nunito', sans-serif;
@@ -14,14 +18,13 @@ body{
   font-weight: 100;
   max-width: 960px;
 }
-*:focus {
+a:focus,*:focus {
     outline: none;
 }
 a{
   text-decoration: none;
   color: inherit;
 }
-
 .underline:hover {
   text-decoration: none;
   border-bottom: 5px solid $art_color;

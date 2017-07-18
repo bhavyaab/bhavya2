@@ -1,7 +1,11 @@
 .contact{
-  min-height: $section-height / 2;
+  min-height: $section-height;
   width:100%;
   font-size: 75%;
+  .parent {
+    position: relative;
+    padding-top: 30%;
+  }
   h3{
     width: 100%;
     text-align: center;
@@ -9,9 +13,6 @@
   }
   div{
     width: 100%;
-  }
-  .parent {
-    position: relative;
   }
  .left{
  min-height: $min-height * 2;
@@ -52,7 +53,6 @@
      height: 60%;
      width: 80%;
      margin-left: $gutter*2;
-     margin-top: $gutter;;
    }
 
    li{
@@ -73,7 +73,7 @@
      display: block;
      width: 40%;
      left: 60%;
-     top:15%;
+     top:55%;
    }
  }
  }

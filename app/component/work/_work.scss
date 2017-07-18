@@ -1,93 +1,56 @@
 .work{
-  height: $section-height;
-  width:100%;
-  position: relative;
-
+  min-height: 100%;
+  width: 100%;
+  font-size: 75%;
   .container {
-    margin-top: 55%;
-    width: 50%;
-    min-height: $min-height * 2;
-    perspective: 1000px;
-    padding: 0px;
+    width: 80%;
+    height: 45vh;
+    margin: $gutter 0 $gutter $gutter * 2;
   }
-
-  .carousel {
-    height: $section-height;
-    width: 100%;
-    position: absolute;
-    transform-style: preserve-3d;
-    transition: transform 1s;
-  }
-
-  .item {
-    display: block;
-    position: absolute;
-    background: $white;
-    border: 1px solid $black;
-    width: 90%;
-    min-inline-size: 90%;
-    font-size: 70%;
-    font-weight: lighter;
-    text-align: center;
-    color: $black;
-  }
-  .project-header{
-    min-height: $min-height * 2;
-    width: 100%;
-    position: relative;
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    box-shadow: 2px 4px 8px 2px rgba(0,0,0,0.16);
-    a{
+.project{
+  min-height:100%;;
+  width: 100%;
+  position: relative;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  box-shadow: 2px 4px 8px 2px rgba(0,0,0,0.16);
+  a{
     background-color: #ce191a;
-    color: $white;
-    z-index: 100;
-    margin-bottom: 10%;
-  }
-  }
-  .project-info{
-    min-height: $min-height;
-    width:100%;
+    color: #fff;
     position: absolute;
-    top: $gutter * 5;
-    vertical-align: baseline;
-    vertical-align: middle;
-    background-color: rgba(0,0,0,0.6);
-    color: $white;
-    h2{
-      margin: $gutter 0;
-    }
-    p{
-      display: none;
-      width: 80%;
-      margin-left: $gutter*2;
-      padding: $gutter;
-    }
+    top: 60%;
+    left: 25%;
   }
-  .next, .prev {
-    font-size: 2em;
-    height: $section-height - $min-height;
-    width: 25%;
-    cursor: pointer;
-    position: absolute;
-    top: -$gutter;
+}
+h2{
+  width: 100%;
+  text-align: center;
+  padding:  $gutter*2;
+}
+.project-info{
+  min-height: 20%;
+  width:100%;
+  position: absolute;
+  top: 70%;
+  background-color: rgba(0,0,0,0.6);
+  color: $white;
+
+  p{
+    width: 80%;
+    margin-left: $gutter*2;
+    padding: $gutter;
   }
-  .next { right: 0;}
-  .prev { left: 0;}
-  @media screen and (min-width: 650px){
-    .container{
-    margin-top: $gutter;
-    }
+
+}
+@media screen and (min-width:450px){
+  .project > h2{
+    text-align: left;
   }
-  @media screen and (min-height: 830px){
-    .project-info{
-      top: $gutter * 4;
-      h2{
-        display: none;
-      }
-      p{
-        display: block;
-      }
-    }
+
+  .project a{
+    top: 65%;
+    left: 65%;
   }
+
+}
 }

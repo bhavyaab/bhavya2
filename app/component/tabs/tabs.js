@@ -2,28 +2,23 @@
 
 module.exports = {
   template: require('./tabs.html'),
-  controller: ['$log', '$location', '$anchorScroll', TabsController],
+  controller: ['$log', '$location', '$document', TabsController],
   controllerAs: 'tabsCtrl',
   bindings:{
     display: '='
   }
 };
 
-function TabsController($log, $location, $anchorScroll) {
+function TabsController($log, $location, $ducoment) {
   $log.debug('TabsController');
 
-  $anchorScroll.yOffset = 100;
-
-  this.gotoAnchor = function(id) {
-    console.log(' id clicked' , id);
-    if ($location.hash() !== id) {
-        // set the $location.hash to `id` and
-        // $anchorScroll will automatically scroll to it
-      $location.hash(id);
-    } else {
-        // call $anchorScroll() explicitly,
-        // since $location.hash hasn't changed
-      $anchorScroll();
-    }
+  this.gotoAnchor = function(id){
+    var section = angular.element(document.getElementById(id));
+    $document.scrollTo(section, 30, 10000);
   };
+
+  this.toTheTop = function() {
+    $document.scrollTop(30, 5000);
+  };
+
 }

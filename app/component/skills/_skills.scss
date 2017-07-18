@@ -5,6 +5,7 @@
 div{
   width: 100%;
   min-height: $min-height * 2;
+  padding-top: 15%;
 }
 
 .left{
@@ -23,6 +24,7 @@ div{
   text-align:justify;
   background-color: $white;
 }
+
 .right ul{
   width: 78%;
   height: 80%;

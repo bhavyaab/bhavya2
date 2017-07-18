@@ -1,23 +1,12 @@
-<section id="workB" class="work">
-<div class="container">
-<ul class="carousel">
-      <li  ng-repeat="x in workCtrl.projects"
-            class="item"
-            id="$index"
-            ng-style="workCtrl.transform($index)"
-            >
-            <div class="project-header" style="background-image: url({{x.image}})">
-            <div class="project-info">
-              <h2>{{x.name}}</h2>
-              <p>{{x.description}}</p>
-              <p>Technology: {{x.technical}}</p>
-              <a class="btn" href={{x.url}} target="_blank">{{x.button}}</a>
-            </div>
-          </div>
-        </div></li>
-</ul>
-<div ng-click="workCtrl.rotate($event)" class="prev"></div>
-<div ng-click="workCtrl.rotate($event)" class="next"></div>
-</div>
+<section class="work">
+    <div class="container" ng-repeat="x in workCtrl.projects">
+      <div class="project" style="background-image: url({{x.image}})">
+        <h2>{{x.name}}</h2>
+        <div class="project-info">
+          <p>Technical Description: {{x.technical}}</p>
+        </div>
+        <a class="btn" href={{x.url}} target="_blank">{{x.button}}</a>
+      </div>
+    </div>
 </section>
 <!-- &#10096 -->

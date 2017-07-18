@@ -1,4 +1,14 @@
 .tabs{
+  background-color: $black;
+  color: $white;
+  padding-top: $gutter;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  ul{
+    width: 50%;
+    margin-left: 25%;
+  }
    li{
      width: 100%;
      text-align: center;
@@ -6,9 +16,13 @@
      cursor: pointer;
      outline-radius: $bdRdius;
      margin-bottom: $gutter/2;
+     z-index: 100;
    }
    li:hover{
-    outline: 1px solid $black;
+    outline: 1px solid $white;
+   }
+   li:active{
+     outline: 1px solid $white;
    }
 }
 @media screen and (min-width:450px){
@@ -17,4 +31,5 @@
     padding-left: 0;
     margin-bottom: 0;
 }
+
 }
