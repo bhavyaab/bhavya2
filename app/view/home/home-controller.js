@@ -9,6 +9,7 @@ function homeController($log, $location, $document, $element){
 
   let url = $location.url();
   this.showHome = url === '/about' || '' || '/';
+  document.getElementById('showTopScoller').style.display = 'none';
 
   this.toTheTop = function() {
     $document.scrollTop(30, 3000);
