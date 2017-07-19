@@ -2,12 +2,13 @@
 
 module.exports = {
   template: require('./contact.html'),
-  controller: ['$log', '$location', '$timeout', 'emailService', ContactController],
+  controller: ['$log', '$location', 'emailService', ContactController],
   controllerAs: 'contactCtrl'
 };
 
-function ContactController($log, $location, $timeout, emailService) {
+function ContactController($log, $location, emailService){
   $log.debug('ContactController');
+  this.url = process.env.API_URL;
   this.hello = true;
   this.placeholder = {
     name: 'Your name ..',
@@ -16,13 +17,7 @@ function ContactController($log, $location, $timeout, emailService) {
 
   };
   this.form = {};
-  this.hide= function(){
-    console.log('hide called');
-    setTimeout(function () {
-      ContactController.hello = true;
-      console.log(ContactController);
-    }, 3000);
-  };
+
   this.email = function(){
     if(!this.form.name) $log.debug('name not found!');
     if(!this.form.email) this.placeholder.email = 'How I can Contact You?';
@@ -32,7 +27,15 @@ function ContactController($log, $location, $timeout, emailService) {
       emailService.sendMail(this.form)
       .then(this.form = {})
       .then(this.hello = false)
-      .then(this.hide());
+      .then(() => {
+        var d = new Date().getSeconds();
+        var interval = d + 2;
+        while(d <= interval) d = new Date().getSeconds();
+        return d;
+      })
+      .then(d => {
+        this.hello = true;
+      });
     }
   };
 }
