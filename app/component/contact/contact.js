@@ -6,8 +6,9 @@ module.exports = {
   controllerAs: 'contactCtrl'
 };
 
-function ContactController($log, $location, emailService) {
+function ContactController($log, $location, emailService){
   $log.debug('ContactController');
+  this.url = process.env.API_URL;
   this.hello = true;
   this.placeholder = {
     name: 'Your name ..',
@@ -25,7 +26,16 @@ function ContactController($log, $location, emailService) {
     } else {
       emailService.sendMail(this.form)
       .then(this.form = {})
-      .then(this.hello = false);
+      .then(this.hello = false)
+      .then(() => {
+        var d = new Date().getSeconds();
+        var interval = d + 2;
+        while(d <= interval) d = new Date().getSeconds();
+        return d;
+      })
+      .then(d => {
+        this.hello = true;
+      });
     }
   };
 }

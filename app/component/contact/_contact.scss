@@ -34,14 +34,11 @@
    input, textarea{
     width: 80%;
     margin-left: 10%;
-    border-radius: 0;
     border: 0;
     border-bottom: 1px solid #999;
-    // background-color: transparent;
     background: transparent;
     padding: 3em 1em 0em .1em;
    }
-
    input:last-child{
      border-bottom: 0;
      cursor: pointer;
