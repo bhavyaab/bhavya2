@@ -63,7 +63,7 @@ function SkillsController($log, $location) {
       showDetail: false
     },
     aws: {
-      name: 'CLOUD/AWS S3',
+      name: 'CLOUD/AWS',
       star: 3,
       detail:'Good knowledge with various API operations, related request and response structures, authentication, and error codes. I frequently use AWS s3 cloud storage for storing data and other operation.',
       showDetail: false
