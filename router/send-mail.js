@@ -30,7 +30,11 @@ sendMail.post('/contact', jsonParser, function(req, res) {
       console.log('Request was sent');
     }
   })
-  .then(data => res.send(data))
+  .then(data => {
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    res.setHeader('Access-Control-Allow-Headers', '*');
+    res.send(data);
+  })
   .catch(err => res.send(err));
 
 });
