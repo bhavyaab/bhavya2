@@ -24,9 +24,9 @@ sendMail.post('/contact', jsonParser, function(req, res, next) {
   console.log('request = ', request, 'key ', apiKey);
   IFTTTMaker.send(request, function (error) {
     if (error) {
-      console.log('The request could not be sent:', error);
+      return new Error('The request could not be sent: ' + error);
     } else {
-      console.log('Request was sent');
+      return ('Request was sent');
     }
   })
   .then(data => res.send(data))

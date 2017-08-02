@@ -7,14 +7,6 @@ function emailService($q, $log, $http){
 
   let service = {};
   let url = `${__API_URL__}contact`;
-  // let config = {
-  //   // headers: {
-  //   //   'Content-Type': 'application/json',
-  //   //   'Accept': 'application/json',
-  //   //   'Access-Control-Allow-Origin': '*',
-  //   //   'Access-Control-Allow-Headers': '*'
-  //   // }
-  // };
 
   service.sendMail = function(form){
     console.log('url = ', url);
@@ -29,15 +21,6 @@ function emailService($q, $log, $http){
       $log.debug('error occured -- ', response);
     });
   };
-
-  // service.postRequest = function() {
-  //   var xhttp = new XMLHttpRequest();
-  //   xhttp.onreadystatechange = function() {
-  //     console.log('responseText == ',this.responseText);
-  //   };
-  //   xhttp.open('POST', url, true);
-  //   xhttp.send();
-  // };
 
   return service;
 }
