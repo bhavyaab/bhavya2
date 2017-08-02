@@ -1,19 +1,48 @@
 @import './../scss/lib/theme/vars';
 .home{
-  min-height: 95vh;
+  min-height: $section-height;
   width: 100%;
 .keep{
-  height: 10vh;
+  height: $min-height / 2;
   display: none;
+  position: fixed;
 }
-  .content_display{
-    min-height: 60vh;
+.content_display{
+  position: relative;
     width: 100%;
-    position: relative;
+    h2{
+      width: 100%;
+      text-align: center;
+      padding-top: $gutter * 6;
+    }
+
+  }
+  .scrollTop{
+    height: 5em;
+    width: 5em;
+    position: fixed;
+    top: 80%;
+    left: 75%;
+    cursor: pointer;
   }
 @media screen and (min-height: 450px){
   .keep{
     display: block;
   }
+
+
+}
+@media screen and (min-width: 450px){
+  .content_display h2{
+    padding-top: $gutter * 2;
+  }
+}
+@media screen and (min-width: 1300px){
+ .scrollTop{
+   left: calc(50% + 280px);
+ }
+ .content_display h2{
+   padding-top: $gutter * 3;
+ }
 }
 }

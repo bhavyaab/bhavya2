@@ -1,35 +1,10 @@
 <section class="tabs">
-    <ul>
-    <li
-    ng-click=
-    "tabsCtrl.display.about=true;
-    tabsCtrl.display.skills=false;
-    tabsCtrl.display.contact=false;
-    tabsCtrl.display.work=false";
-    ng-style="tabsCtrl.display.about && {'outline':'1px solid #000'}"
-    >About</li>
-    <li
-    ng-click=
-    "tabsCtrl.display.skills=true;
-    tabsCtrl.display.contact=false;
-    tabsCtrl.display.about=false;
-    tabsCtrl.display.work=false"
-    ng-style="tabsCtrl.display.skills && {'outline':'1px solid #000'}"
-    >Skills</li>
-    <li
-    ng-click=
-    "tabsCtrl.display.work=true;
-    tabsCtrl.display.contact=false;
-    tabsCtrl.display.skills=false;
-    tabsCtrl.display.about=false"
-    ng-style="tabsCtrl.display.work && {'outline':'1px solid #000'}"
-    >Work</li>
-    <li ng-click=
-    "tabsCtrl.display.contact=true;
-    tabsCtrl.display.work=false;
-    tabsCtrl.display.skills=false;
-    tabsCtrl.display.about=false"
-    ng-style="tabsCtrl.display.contact && {'outline':'1px solid #000'}"
-    >Contact</li>
+  <!-- <a class="navbar-brand" href="#"></a> -->
+  <li class="ham"><img ng-mouseover="tabsCtrl.show=!tabsCtrl.show" src="http://www.coldclimateconstruction.com/images/menu_icon_white.png" alt="hamburger menu"/></li>
+  <ul ng-show="tabsCtrl.show">
+    <li><a href="#aboutB" du-smooth-scroll du-scrollspy offset="30" >About</a></li>
+    <li><a href="#workB" du-smooth-scroll du-scrollspy offset="30">Work</a></li>
+    <li><a href="#skillsB" du-smooth-scroll du-scrollspy offset="30">Skills</a></li>
+    <li><a href="#contactB" du-smooth-scroll du-scrollspy offset="30">Contact</a></li>
   </ul>
 </section >

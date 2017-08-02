@@ -1,4 +1,25 @@
 .tabs{
+  background-color: $black;
+  color: $white;
+  padding-top: $gutter;
+  width: 100%;
+  max-width: 960px;
+  position: fixed;
+  z-index: 1;
+  box-shadow: 2px 4px 8px 2px rgba(0,0,0,.16);
+  .ham:hover{
+    outline: none;
+  }
+  .ham{
+    img{
+      height: 1em;
+      width: 1em;
+    }
+  }
+  ul{
+    width: 50%;
+    margin-left: 25%;
+  }
    li{
      width: 100%;
      text-align: center;
@@ -6,12 +27,13 @@
      cursor: pointer;
      outline-radius: $bdRdius;
      margin-bottom: $gutter/2;
+     z-index: 100;
    }
    li:hover{
-    // background-color: $color;
-    // text-decoration: underline;
-    // text-shadow: 5px 5px 10px black;
-    outline: 1px solid $black;
+    outline: 1px solid $white;
+   }
+   li:active{
+     outline: 1px solid $white;
    }
 }
 @media screen and (min-width:450px){
@@ -19,5 +41,8 @@
     display: flex;
     padding-left: 0;
     margin-bottom: 0;
+}
+.ham {
+  display: none;
 }
 }
