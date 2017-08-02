@@ -22,6 +22,8 @@ sendMail.post('/contact', jsonParser, function(req, res, next) {
     }
   };
   console.log('request = ', request, 'key ', apiKey);
+  // res.setHeader('Access-Control-Allow-Origin', '*');
+  // res.setHeader('Access-Control-Allow-Headers', '*');
 
   IFTTTMaker.send(request, function (error) {
     if (error) {
