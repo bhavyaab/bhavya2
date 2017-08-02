@@ -34,7 +34,6 @@ context = require.context('./component/', true, /\.js$/);
 context.keys().forEach( key => {
   let name = camelcase(path.basename(key, '.js'));
   let module = context(key);
-  console.log(name, module);
   app.component(name, module);
 });
 
