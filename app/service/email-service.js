@@ -30,14 +30,14 @@ function emailService($q, $log, $http){
     });
   };
 
-  service.postRequest = function() {
-    var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function() {
-      console.log('responseText == ',this.responseText);
-    };
-    xhttp.open('POST', url, true);
-    xhttp.send();
-  };
+  // service.postRequest = function() {
+  //   var xhttp = new XMLHttpRequest();
+  //   xhttp.onreadystatechange = function() {
+  //     console.log('responseText == ',this.responseText);
+  //   };
+  //   xhttp.open('POST', url, true);
+  //   xhttp.send();
+  // };
 
   return service;
 }
