@@ -18,26 +18,16 @@ function emailService($q, $log, $http){
 
   service.sendMail = function(form){
     console.log('url = ', url);
-    // return $http({
-    //   method: 'POST',
-    //   url: url,
-    //   data: JSON.stringify(form),
-    //   config: config
-    // })
-    $http.post(url, JSON.stringify(form), config)
-    .then( res => {
-      $log.log('message sent');
-      return;
-    })
-        .catch( err => {
-          $log.error(err.message);
-          return err.message;
-        });
-// .then(function successCallback(response) {
-//   $log.debug('email send -- ',response, 'response status -- '+ response.data.responseCode);
-// }, function errorCallback(response) {
-//   $log.debug('error occured -- ', response);
-// });
+    return $http({
+      method: 'POST',
+      url: url,
+      data: JSON.stringify(form),
+      config: config
+    }).then(function successCallback(response) {
+      $log.debug('email send -- ',response, 'response status -- '+ response.data.responseCode);
+    }, function errorCallback(response) {
+      $log.debug('error occured -- ', response);
+    });
   };
   return service;
 }

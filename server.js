@@ -9,14 +9,15 @@ const cors = require('./lib/cors-middleware.js');
 const errors = require('./lib/error-middleware.js');
 const sendMail = require('./router/send-mail.js');
 
-app.all(cors);
+app.use(cors);
 
 app.use(express.static(`${__dirname}/build`));
 app.use(sendMail);
 app.use(errors); // always the last middleware
 
-app.get('/', (req, res) => {
+app.get('/', (req, res, next) => {
   res.send('Welcome to my portfolio...');
+  next();
 });
 
 app.listen(PORT, function(){

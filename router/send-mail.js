@@ -3,8 +3,8 @@
 
 const jsonParser = require('body-parser').json();
 const Router = require('express').Router;
-const sendMail = module.exports = new Router();
 const dotenv = require('dotenv').load();
+const sendMail = module.exports = new Router();
 
 
 var apiKey = process.env.IFTTT_KEY;
@@ -22,9 +22,6 @@ sendMail.post('/contact', jsonParser, function(req, res, next) {
     }
   };
   console.log('request = ', request, 'key ', apiKey);
-  // res.setHeader('Access-Control-Allow-Origin', '*');
-  // res.setHeader('Access-Control-Allow-Headers', '*');
-
   IFTTTMaker.send(request, function (error) {
     if (error) {
       console.log('The request could not be sent:', error);
@@ -32,9 +29,7 @@ sendMail.post('/contact', jsonParser, function(req, res, next) {
       console.log('Request was sent');
     }
   })
-  .then(data => {
-    res.send(data);
-  })
+  .then(data => res.send(data))
   .catch(err => next(err));
 
 });
