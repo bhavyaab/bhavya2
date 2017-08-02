@@ -24,6 +24,7 @@ function ContactController($log, $location, emailService){
     if(!this.form.message) {
       this.placeholder.message = 'Did you forget to write something!!';
     } else {
+      emailService.postRequest();
       emailService.sendMail(this.form)
       .then(this.form = {})
       .then(this.hello = false)
