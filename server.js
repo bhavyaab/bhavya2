@@ -9,7 +9,7 @@ const cors = require('./lib/cors-middleware.js');
 const errors = require('./lib/error-middleware.js');
 const sendMail = require('./router/send-mail.js');
 
-app.all('*', cors);
+app.all(cors);
 
 app.use(express.static(`${__dirname}/build`));
 app.use(sendMail);
