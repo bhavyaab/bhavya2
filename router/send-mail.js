@@ -10,7 +10,7 @@ const dotenv = require('dotenv').load();
 var apiKey = process.env.IFTTT_KEY;
 var IFTTTMaker = require('iftttmaker')(apiKey);
 
-sendMail.post('/contact', jsonParser, function(req, res) {
+sendMail.post('/contact', jsonParser, function(req, res, next) {
   var data = req.body;
 
   var request = {
@@ -31,11 +31,9 @@ sendMail.post('/contact', jsonParser, function(req, res) {
     }
   })
   .then(data => {
-    res.setHeader('Access-Control-Allow-Origin', '*');
-    res.setHeader('Access-Control-Allow-Headers', '*');
     res.send(data);
   })
-  .catch(err => res.send(err));
+  .catch(err => next(err));
 
 });
 
