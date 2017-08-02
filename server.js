@@ -11,7 +11,7 @@ const sendMail = require('./router/send-mail.js');
 
 
 app.use(express.static(`${__dirname}/build`));
-app.use(cors());
+app.use(cors);
 app.use(sendMail);
 app.use(errors); // always the last middleware
 
