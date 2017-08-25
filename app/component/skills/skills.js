@@ -73,6 +73,12 @@ function SkillsController($log, $location) {
       star: 5,
       detail:'Good knowledge using bootstrap and angular bootstrap for speedup styling',
       showDetail: false
+    },
+    react: {
+      name: 'React JS',
+      star: 3,
+      detail:'Good knowledge developeing CRUD application using React JS and currently helping student to learn React JS',
+      showDetail: false
     }
   };
 
