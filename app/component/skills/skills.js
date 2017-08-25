@@ -22,7 +22,7 @@ function SkillsController($log, $location) {
     },
     css : {
       name: 'CSS 3',
-      star: 3,
+      star: 4,
       detail:'I write CSS3 code following guidelines and standards for compatibility. I can use new CSS3 features especially "Animation" and "Transition", so I can develop simple animation without using flash. ',
       showDetail: false
     },

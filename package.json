@@ -9,8 +9,8 @@
   "scripts": {
     "kill": "taskkill /f /im node.exe",
     "start": "node server.js",
-    "build": "node ./node_modules/webpack/bin/webpack.js",
-    "build-watch": "npm run start && node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot",
+    "build": "webpack -d",
+    "watch": "webpack-dev-server --inline --hot --port 8000",
     "heroku-postbuild": "webpack -p --progress"
   },
   "keywords": [],
