@@ -11,7 +11,7 @@ module.exports = {
 
 function TabsController($log, $location, $ducoment, $window) {
   $log.debug('TabsController');
-
+  this.brand = 'http://cdn.mysitemyway.com/etc-mysitemyway/icons/legacy-previews/icons-256/black-paint-splatter-icons-alphanumeric/069063-black-paint-splatter-icon-alphanumeric-letter-b.png';
   this.show = false;
   if($window.innerWidth > 450){
     this.show = true;

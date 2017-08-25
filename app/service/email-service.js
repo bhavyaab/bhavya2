@@ -9,7 +9,6 @@ function emailService($q, $log, $http){
   let url = `${__API_URL__}/contact`;
 
   service.sendMail = function(form){
-    console.log('url = ', url);
     return $http({
       method: 'POST',
       url: url,

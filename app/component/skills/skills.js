@@ -22,7 +22,7 @@ function SkillsController($log, $location) {
     },
     css : {
       name: 'CSS 3',
-      star: 3,
+      star: 4,
       detail:'I write CSS3 code following guidelines and standards for compatibility. I can use new CSS3 features especially "Animation" and "Transition", so I can develop simple animation without using flash. ',
       showDetail: false
     },
@@ -72,6 +72,12 @@ function SkillsController($log, $location) {
       name: 'Bootstrap',
       star: 5,
       detail:'Good knowledge using bootstrap and angular bootstrap for speedup styling',
+      showDetail: false
+    },
+    react: {
+      name: 'React JS',
+      star: 3,
+      detail:'Good knowledge developeing CRUD application using React JS and currently helping student to learn React JS',
       showDetail: false
     }
   };
