@@ -75,8 +75,8 @@ function SkillsController($log, $location) {
       showDetail: false
     },
     react: {
-      name: 'React JS',
-      star: 3,
+      name: 'React JS/Redux',
+      star: 4,
       detail:'Good knowledge developeing CRUD application using React JS and currently helping student to learn React JS',
       showDetail: false
     }
