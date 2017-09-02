@@ -1,0 +1,14 @@
+.sticky{
+  width: 10vw;
+  position: fixed;
+  top: 35vh;
+  right: -6vw;
+  background-color: $black;
+  border-radius: 5px;
+  z-index: 100;
+  img{
+    height: 3vh;
+    width: 3vh;
+    margin: $gutter * 2;
+  }
+}

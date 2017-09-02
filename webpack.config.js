@@ -57,8 +57,12 @@ module.exports = {
       loader: 'url?limit=10000&name=font/[hash].[ext]'
     },
     {
-      test: /\.(jpg|jpeg|svg|bmp|tiff|gif|png)$/,
-      loader: 'url?limit=10000&name=image/[hash].[ext]'
+        test: /\.(jpg|jpeg|gif|png|tiff|svg)$/,
+        loader: 'url-loader',
+        options: {
+          limit: 60000,
+          name: 'image/[name].[ext]',
+        },
     },
     {
       test: /\.scss$/,
