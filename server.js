@@ -1,5 +1,5 @@
 'use strict';
-
+require ('newrelic');
 const express = require('express');
 const dotenv = require('dotenv').load();
 const app = express();
